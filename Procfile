@@ -1,0 +1,1 @@
+web: gunicorn village_app.wsgi
