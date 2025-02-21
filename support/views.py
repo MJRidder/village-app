@@ -6,5 +6,5 @@ from .models import Support
 
 # Create your views here.
 class SupportList(generic.ListView):
-    queryset = Support.objects.all()
+    queryset = Support.objects.all().filter(status=1)
     template_name = "support_list.html"

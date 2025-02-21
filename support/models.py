@@ -77,7 +77,8 @@ class Support(models.Model):
     ]
 
     region = models.CharField(choices=REGION, default=Dublin_0)
-
+    
+    # age_group Charfield content
     Not_Specified = "Not specified"
     Baby = "Baby (age 0-1y)"
     Toddler = "Toddler (age 1-3y)"
@@ -97,6 +98,7 @@ class Support(models.Model):
     ]
     age_group = models.CharField(choices=AGES, default=Not_Specified)
 
+    # type_of_request Charfield content
     Not_Specified = "not specified"
     Offering_Help = "Offering help"
     Asking_Help = "Asking help"
