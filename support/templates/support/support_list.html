@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support posts overview</title>
+</head>
+
+<body>
+    <h1>Support posts</h1>
+    {% for support in object_list %}
+    <h2>{{ support.topic }}</h2>
+    <p>Type of Support: {{ support.type_of_request }}</p>
+    <p>Where: {{ support.region }}</p>
+    <p>Parent: {{ support.parent }}</p>
+    {% endfor %}
+</body>
+
+</html>

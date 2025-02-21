@@ -1,43 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-STATUS = ((0, "Draft"), (1, "Posted"))
-REGION = (
-    (0, "Not specified"),
-    (1, "Dublin 1"),
-    (2, "Dublin 2"),
-    (3, "Dublin 3"),
-    (4, "Dublin 4"),
-    (5, "Dublin 5"),
-    (6, "Dublin 6"),
-    (7, "Dublin 7"),
-    (8, "Dublin 8"),
-    (9, "Dublin 9"),
-    (10, "Dublin 10"),
-    (11, "Dublin 11"),
-    (12, "Dublin 12"),
-    (13, "Dublin 13"),
-    (14, "Dublin 14"),
-    (15, "Dublin 15"),
-    (16, "Dublin 16"),
-    (17, "Dublin 17"),
-    (18, "Dublin 18"),
-    (19, "Dublin 19"),
-    (20, "Dublin 20"),
-    (21, "Dublin 21"),
-    (22, "Dublin 22"),
-    (23, "Dublin 23"),
-    (24, "Dublin 24"),
-)
-
-AGES = (
-    (0, "Not specified"),
-    (1, "Baby (age 0-1y)"),
-    (2, "Toddler (age 1-3y)"),
-    (3, "Child (age 4-12y)"),
-    (4, "Teenager (age 3-19y)"),
-    (5, "Young adult (age 16-24)"),
-    (6, "Multiple ages"),
+STATUS = (
+    (0, "Draft"),
+    (1, "Posted")
 )
 
 
@@ -53,7 +19,102 @@ class Support(models.Model):
     )
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
     updated_on = models.DateTimeField(auto_now=True)
-    region = models.CharField(choices=REGION, default=0)
-    age_group = models.CharField(choices=AGES, default=0)
+
+    # Region Charfield content
+    Dublin_0 = "Not specified"
+    Dublin_1 = "Dublin 1"
+    Dublin_2 = "Dublin 2"
+    Dublin_3 = "Dublin 3"
+    Dublin_4 = "Dublin 4"
+    Dublin_5 = "Dublin 5"
+    Dublin_6 = "Dublin 6"
+    Dublin_7 = "Dublin 7"
+    Dublin_8 = "Dublin 8"
+    Dublin_9 = "Dublin 9"
+    Dublin_10 = "Dublin 10"
+    Dublin_11 = "Dublin 11"
+    Dublin_12 = "Dublin 12"
+    Dublin_13 = "Dublin 13"
+    Dublin_14 = "Dublin 14"
+    Dublin_15 = "Dublin 15"
+    Dublin_16 = "Dublin 16"
+    Dublin_17 = "Dublin 17"
+    Dublin_18 = "Dublin 18"
+    Dublin_19 = "Dublin 19"
+    Dublin_20 = "Dublin 20"
+    Dublin_21 = "Dublin 21"
+    Dublin_22 = "Dublin 22"
+    Dublin_23 = "Dublin 23"
+    Dublin_24 = "Dublin 24"
+
+    REGION = [
+        (Dublin_0, "Not specified"),
+        (Dublin_1, "Dublin 1"),
+        (Dublin_2, "Dublin 2"),
+        (Dublin_3, "Dublin 3"),
+        (Dublin_4, "Dublin 4"),
+        (Dublin_5, "Dublin 5"),
+        (Dublin_6, "Dublin 6"),
+        (Dublin_7, "Dublin 7"),
+        (Dublin_8, "Dublin 8"),
+        (Dublin_9, "Dublin 9"),
+        (Dublin_10, "Dublin 10"),
+        (Dublin_11, "Dublin 11"),
+        (Dublin_12, "Dublin 12"),
+        (Dublin_13, "Dublin 13"),
+        (Dublin_14, "Dublin 14"),
+        (Dublin_15, "Dublin 15"),
+        (Dublin_16, "Dublin 16"),
+        (Dublin_17, "Dublin 17"),
+        (Dublin_18, "Dublin 18"),
+        (Dublin_19, "Dublin 19"),
+        (Dublin_20, "Dublin 20"),
+        (Dublin_21, "Dublin 21"),
+        (Dublin_22, "Dublin 22"),
+        (Dublin_23, "Dublin 23"),
+        (Dublin_24, "Dublin 24"),
+    ]
+
+    region = models.CharField(choices=REGION, default=Dublin_0)
+
+    Not_Specified = "Not specified"
+    Baby = "Baby (age 0-1y)"
+    Toddler = "Toddler (age 1-3y)"
+    Child = "Child (age 4-12y)"
+    Teenager = "Teenager (age 13-19y)"
+    Young_Adult = "Young adult (age 16-24)"
+    Multiple_Ages = "Multiple ages"
+
+    AGES = [
+        (Not_Specified, "Not specified"),
+        (Baby, "Baby (age 0-1y)"),
+        (Toddler, "Toddler (age 1-3y)"),
+        (Child, "Child (age 4-12y)"),
+        (Teenager, "Teenager (age 13-19y)"),
+        (Young_Adult, "Young adult (age 16-24)"),
+        (Multiple_Ages, "Multiple ages"),
+    ]
+    age_group = models.CharField(choices=AGES, default=Not_Specified)
+
+    Not_Specified = "not specified"
+    Offering_Help = "Offering help"
+    Asking_Help = "Asking help"
+    Sharing_Tips_and_Tricks = "Sharing tips & tricks"
+
+    TYPEREQUEST = [
+        (Not_Specified, "not specified"),
+        (Offering_Help, "Offering help"),
+        (Asking_Help, "Asking help"),
+        (Sharing_Tips_and_Tricks, "Sharing tips & tricks")
+    ]
+
+    type_of_request = models.CharField(
+        choices=TYPEREQUEST, default=Not_Specified)
+    status = models.IntegerField(choices=STATUS, default=0)
+
+    class Meta:
+        ordering = ["-created_on", "region", "age_group", "type_of_request"]
+
+    def __str__(self):
+        return f"{self.region} | {self.type_of_request} | {self.age_group} | Topic: {self.topic}" #noqa
