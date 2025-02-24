@@ -8,4 +8,4 @@ from .models import Support
 class SupportList(generic.ListView):
     queryset = Support.objects.all().filter(status=1)
     template_name = "support/index.html"
-    paginate_by = 6
+    paginate_by = 12
