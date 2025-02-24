@@ -12,7 +12,7 @@ class SupportAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'age_group', 'type_of_request', 'region')
     # QUESTION - how to minimise the filters in admin?
     prepopulated_fields = {'slug': ('topic',)}
-    # QUESTION - how can I make the slug unique? add parent in there?
+    # QUESTION - how can I make the slug unique? add parent ID in there?
     summernote_fields = ('content',)
 
 

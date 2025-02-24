@@ -18,7 +18,7 @@
                                     <p class="parent">Parent: {{ support.parent }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'support_detail' support.slug %}" class="post-link">
                                 <h2 class="card-title">{{ support.topic }}</h2>
                             </a>
                             <p class="card-text">{{ support.content|slice:":100" }}<span>...</span></p>
