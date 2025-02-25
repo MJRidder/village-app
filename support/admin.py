@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Support
-# , Respond
 from django_summernote.admin import SummernoteModelAdmin
+from .models import Support, Respond
+
 
 
 @admin.register(Support)
@@ -16,5 +16,4 @@ class SupportAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
 
-# Register your models here.
-# admin.site.register(Respond)
+admin.site.register(Respond)

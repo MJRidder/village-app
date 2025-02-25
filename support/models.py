@@ -120,4 +120,19 @@ class Support(models.Model):
         ordering = ["-created_on", "region", "age_group", "type_of_request"]
 
     def __str__(self):
-        return f"{self.region} | {self.type_of_request} | {self.age_group} | Topic: {self.topic}" #noqa
+        return f"{self.region} | {self.type_of_request} | {self.age_group} | Topic: {self.topic}"  #noqa
+
+class Respond(models.Model):
+    support = models.ForeignKey(
+        Support, on_delete=models.CASCADE, related_name="replies")
+    parent = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="parent")
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Response {self.body} by {self.parent}"
