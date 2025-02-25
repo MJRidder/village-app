@@ -16,4 +16,11 @@ class SupportAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
 
-admin.site.register(Respond)
+@admin.register(Respond)
+class RespondAdmin(SummernoteModelAdmin):
+
+    list_display = ('approved', 'parent', 'created_on')
+    search_fields = ['parent', 'created_on']
+    list_filter = ('approved', 'parent')
+    # QUESTION - how to minimise the filters in admin?
+    summernote_fields = ('content',)

@@ -26,9 +26,15 @@ def support_detail(request, slug):
 
     queryset = Support.objects.filter(status=1)
     supportPage = get_object_or_404(queryset, slug=slug)
+    replies = supportPage.replies.all().order_by("-created_on")
+    replies_count = supportPage.replies.filter(approved=True).count()
 
     return render(
         request,
         "support/support_detail.html",
-        {"support": supportPage},
+        {
+            "support": supportPage,
+            "replies": replies,
+            "replies_count": replies_count,
+        },
     )

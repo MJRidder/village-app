@@ -26,6 +26,48 @@
             </div>
         </div>
     </div>
+      <!-- Displaying count of Responses -->
+  <div class="row">
+    <div class="col-12">
+      <strong class="text-secondary">
+        <i class="far fa-comments"></i> {{ replies_count }}
+      </strong>
+    </div>
+    <div class="col-12">
+      <hr>
+    </div>
+  </div>
+  <!-- Displaying Replies -->
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 ">
+      <h3>Replies:</h3>
+      <div class="card-body">
+        <!-- We want a for loop inside the empty control tags
+          to iterate through each reply in replies -->
+        {% for reply in replies %}
+        <div class="p-2 comments
+          {% if not reply.approved and reply.parent == user %}
+          faded{% elif not reply.approved %} d-none{% endif %}">
+          <p class="font-weight-bold">
+            {{ reply.parent }}
+            <span class="font-weight-normal">
+              {{ reply.created_on }}
+            </span> wrote:
+          </p>
+          <div id="comment{{ reply.id }}">
+            {{ reply.body | linebreaks }}
+          </div>
+          {% if not reply.approved and reply.parent == user %}
+          <p class="approval">
+            This reply is awaiting approval
+          </p>
+          {% endif %}
+        </div>
+        <!-- Our for loop ends here -->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock content %}
