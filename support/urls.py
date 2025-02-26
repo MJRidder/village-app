@@ -7,5 +7,7 @@ urlpatterns = [
     path('<slug:slug>/', views.support_detail, name='support_detail'),
     path('<slug:slug>/edit_reply/<int:reply_id>',
          views.reply_edit, name='reply_edit'),
+    path('<slug:slug>/delete_reply/<int:reply_id>',
+         views.reply_delete, name='reply_delete'),
 
 ]

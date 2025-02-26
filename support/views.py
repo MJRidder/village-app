@@ -56,6 +56,7 @@ def support_detail(request, slug):
         },
     )
 
+
 def reply_edit(request, slug, reply_id):
     """
     view to edit replies to support posts
@@ -65,15 +66,32 @@ def reply_edit(request, slug, reply_id):
         queryset = Support.objects.filter(status=1)
         supportPage = get_object_or_404(queryset, slug=slug)
         replies = get_object_or_404(Respond, pk=reply_id)
-        reply_form = RespondForm(data=request.POST, instance=supportPage)
+        reply_form = RespondForm(data=request.POST, instance=replies)
 
         if reply_form.is_valid() and replies.parent == request.user:
             reply = reply_form.save(commit=False)
-            reply.post = supportPage
+            reply.supportPage = supportPage
             reply.approved = False
             reply.save()
-            messages.add_message(request, messages.SUCCESS, 'Reply Udated!')
+            messages.add_message(request, messages.SUCCESS, 'Reply Updated!')
         else:
             messages.add_message(request, messages.ERROR, 'Error updating reply!')
+
+    return HttpResponseRedirect(reverse('support_detail', args=[slug]))
+
+
+def reply_delete(request, slug, reply_id):
+    """
+    view to delete a reply
+    """
+    queryset = Support.objects.filter(status=1)
+    supportPage = get_object_or_404(queryset, slug=slug)
+    replies = get_object_or_404(Respond, pk=reply_id)
+
+    if replies.parent == request.user:
+        replies.delete()
+        messages.add_message(request, messages.SUCCESS, 'Reply deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own replies!')
 
     return HttpResponseRedirect(reverse('support_detail', args=[slug]))

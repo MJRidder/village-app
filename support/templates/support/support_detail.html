@@ -61,12 +61,12 @@
             This reply is awaiting approval
           </p>
           {% endif %}
-          <!-- Editing replies -->
+          <!-- Deleting & Editing replies -->
           {% if user.is_authenticated and reply.parent == user %}
-          <p>Reply ID: {{ reply.id }}</p>
+          <button class="btn btn-delete"
+            reply_id="{{ reply.id }}">Delete</button>
           <button class="btn btn-edit"
             reply_id="{{ reply.id }}">Edit</button>
-            
           {% endif %}
         </div>
         <!-- Our for loop ends here -->
@@ -87,11 +87,36 @@
                   class="btn btn-signup btn-lg">Submit</button>
               </form>
               {% else %}
-              <p>Log in to leave a comment</p>
+              <p>Log in to leave a reply</p>
               <!-- IMPORT - need to add a link to sign in/register here -->
               {% endif %}
             </div>
           </div>
+  </div>
+</div>
+
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="deleteModalLabel">Delete reply?</h5>
+        <button type="button" class="btn-close"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your reply?
+        This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"
+          data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn
+          btn-danger">Delete</a>
+      </div>
+    </div>
   </div>
 </div>
 
