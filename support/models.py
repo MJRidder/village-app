@@ -122,6 +122,7 @@ class Support(models.Model):
     def __str__(self):
         return f"{self.region} | {self.type_of_request} | {self.age_group} | Topic: {self.topic}"  #noqa
 
+
 class Respond(models.Model):
     support = models.ForeignKey(
         Support, on_delete=models.CASCADE, related_name="replies")

@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
 from django.views import generic
+from django.contrib import messages
 from .models import Support
+from .forms import RespondForm
 
 
 class SupportList(generic.ListView):
@@ -27,7 +28,21 @@ def support_detail(request, slug):
     queryset = Support.objects.filter(status=1)
     supportPage = get_object_or_404(queryset, slug=slug)
     replies = supportPage.replies.all().order_by("-created_on")
-    replies_count = supportPage.replies.filter(approved=True).count()
+    reply_count = supportPage.replies.filter(approved=True).count()
+
+    if request.method == "POST":
+        reply_form = RespondForm(data=request.POST)
+        if reply_form.is_valid():
+            reply = reply_form.save(commit=False)
+            reply.parent = request.user
+            reply.support = supportPage
+            reply.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Comment submitted and awaiting approval'
+            )
+
+    reply_form = RespondForm()
 
     return render(
         request,
@@ -35,6 +50,7 @@ def support_detail(request, slug):
         {
             "support": supportPage,
             "replies": replies,
-            "replies_count": replies_count,
+            "reply_count": reply_count,
+            "reply_form": reply_form,
         },
     )
