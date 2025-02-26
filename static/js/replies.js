@@ -16,9 +16,11 @@ const submitButton = document.getElementById("submitButton");
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
     let replyId = e.target.getAttribute("reply_id");
+    console.log("this is reply ID", replyId);
     let replyContent = document.getElementById(`reply${replyId}`).innerText;
+    console.log("this is reply content", replyContent);
     replyText.value = replyContent;
     submitButton.innerText = "Update";
-    commentForm.setAttribute("action", `edit_comment/${replyId}`);
+    respondForm.setAttribute("action", `edit_reply/${replyId}`);
   });
 }

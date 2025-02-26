@@ -53,7 +53,7 @@
               {{ reply.created_on }}
             </span> wrote:
           </p>
-          <div id="comment{{ reply.id }}">
+          <div id="reply{{ reply.id }}">
             {{ reply.body | linebreaks }}
           </div>
           {% if not reply.approved and reply.parent == user %}
@@ -63,8 +63,10 @@
           {% endif %}
           <!-- Editing replies -->
           {% if user.is_authenticated and reply.parent == user %}
+          <p>Reply ID: {{ reply.id }}</p>
           <button class="btn btn-edit"
             reply_id="{{ reply.id }}">Edit</button>
+            
           {% endif %}
         </div>
         <!-- Our for loop ends here -->
@@ -77,7 +79,7 @@
               {% if user.is_authenticated %}
               <h3>Leave your reply here:</h3>
               <p>Posting as: {{ user.username }}</p>
-              <form id="RespondForm" method="post"
+              <form id="respondForm" method="post"
                 style="margin-top: 1.3em;">
                 {{ reply_form | crispy }}
                 {% csrf_token %}
