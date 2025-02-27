@@ -30,16 +30,21 @@ body {
 }
 
 .card {
-    border: none;
+    border: 1px solid;
+    border-radius: 12px;
     background-color: transparent;
 }
 
-.image-container {
+/* .image-container {
     position: relative;
+} */
+
+.card-title {
+    color: whitesmoke;
 }
 
-.image-flash {
-    position: absolute;
+.support-post-header {
+    position: relative;
     bottom: 5%;
     min-width: 30%;
     left: -2px;
@@ -52,9 +57,10 @@ body {
 }
 
 .parent {
-    color: white;
+    color: black;
     margin: 4px;
     text-transform: uppercase;
+    background-color: #a7a7a7;
 }
 
 .masthead {

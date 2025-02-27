@@ -34,11 +34,11 @@ body {
     background-color: transparent;
 }
 
-.image-container {
+/* .image-container {
     position: relative;
-}
+} */
 
-.image-flash {
+.support-post-header {
     position: absolute;
     bottom: 5%;
     min-width: 30%;

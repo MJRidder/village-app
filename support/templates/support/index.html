@@ -7,21 +7,20 @@
     <div class="row">
 
         <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
+        <div class="col-10 mx-auto">
             <div class="row">
                 {% for support in support_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
+                <div class="col-12">
+                    <div class="card">
                         <div class="card-body">
-                            <div class="image-container">
-                                <div class="image-flash">
-                                    <p class="parent">Parent: {{ support.parent }}</p>
-                                </div>
+                            <div class="support-post-header">
+                                <h2 class="card-title mb-2 p-2">{{ support.topic }}</h2>
                             </div>
+
                             <a href="{% url 'support_detail' support.slug %}" class="post-link">
-                                <h2 class="card-title">{{ support.topic }}</h2>
+                                <p class="parent mt-1 mb-1 p-1">Parent: {{ support.parent }}</p>
                             </a>
-                            <p class="card-text">{{ support.content|slice:":100" }}<span>...</span></p>
+                            <p class="card-text">{{ support.content|slice:":200" }}<span>...</span></p>
                             </a>
 
                             <hr />
@@ -55,6 +54,11 @@
         </ul>
     </nav>
     {% endif %}
+</div>
+
+<div>
+    <!-- Need to add a link back to top when you hit the bottom of the page -->
+    <p>Back to top</p>
 </div>
 
 <!-- index.html content ends here -->

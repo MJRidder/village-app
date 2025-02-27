@@ -9,7 +9,7 @@ from .forms import RespondForm
 class SupportList(generic.ListView):
     queryset = Support.objects.all().filter(status=1)
     template_name = "support/index.html"
-    paginate_by = 12
+    paginate_by = 10
 
 
 def support_detail(request, slug):
