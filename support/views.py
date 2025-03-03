@@ -73,9 +73,11 @@ def reply_edit(request, slug, reply_id):
             reply.supportPage = supportPage
             reply.approved = False
             reply.save()
-            messages.add_message(request, messages.SUCCESS, 'Reply Updated!')
+            messages.add_message(
+                request, messages.SUCCESS, 'Reply Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating reply!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating reply!')
 
     return HttpResponseRedirect(reverse('support_detail', args=[slug]))
 
@@ -90,8 +92,10 @@ def reply_delete(request, slug, reply_id):
 
     if replies.parent == request.user:
         replies.delete()
-        messages.add_message(request, messages.SUCCESS, 'Reply deleted!')
+        messages.add_message(
+            request, messages.SUCCESS, 'Reply deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own replies!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own replies!')
 
     return HttpResponseRedirect(reverse('support_detail', args=[slug]))

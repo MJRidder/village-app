@@ -9,7 +9,7 @@
 <html class="h-100" lang="en">
 
 <head>
-    <title>CodeStar Blog</title>
+    <title>It Takes a Village platform for parents</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Google Fonts CSS -->
@@ -58,9 +58,11 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    It Takes A Village
-                </span>
+                {% if user.is_authenticated %}
+                <p class="text-end m-3">You are logged in as {{ user }}</p>
+                {% else %}
+                <p class="text-end m-3">You are not logged in</p>
+                {% endif %}
             </div>
         </div>
     </nav>
@@ -82,16 +84,9 @@
     </div>
 
     <main class="flex-shrink-0 main-bg">
-        {% if user.is_authenticated %}
-        <p class="text-end m-3">You are logged in as {{ user }}</p>
-        {% else %}
-        <p class="text-end m-3">You are not logged in</p>
-        {% endif %}
-
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
-
     </main>
 
     <!-- Footer -->
