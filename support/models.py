@@ -97,7 +97,8 @@ class Support(models.Model):
         (Young_Adult, "Young adult (age 16-24)"),
         (Multiple_Ages, "Multiple ages"),
     ]
-    age_group = models.CharField(choices=AGES, default=Not_Specified, max_length=30)
+    age_group = models.CharField(
+        choices=AGES, default=Not_Specified, max_length=30)
 
     # type_of_request Charfield content
     Not_Specified = "not specified"
@@ -113,7 +114,9 @@ class Support(models.Model):
     ]
 
     type_of_request = models.CharField(
-        choices=TYPEREQUEST, default=Not_Specified , max_length=25)
+        choices=TYPEREQUEST,
+        default=Not_Specified,
+        max_length=25)
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
