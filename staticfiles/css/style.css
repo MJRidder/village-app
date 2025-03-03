@@ -30,7 +30,8 @@ body {
 }
 
 .card {
-    border: none;
+    border: 1px solid;
+    border-radius: 12px;
     background-color: transparent;
 }
 
@@ -38,12 +39,17 @@ body {
     position: relative;
 } */
 
+.card-title {
+    color: whitesmoke;
+}
+
 .support-post-header {
-    position: absolute;
+    position: relative;
     bottom: 5%;
     min-width: 30%;
     left: -2px;
     background-color: #188181;
+    border-radius: 25px 25px 0 0;
 }
 
 .scale {
@@ -52,9 +58,10 @@ body {
 }
 
 .parent {
-    color: white;
+    color: black;
     margin: 4px;
     text-transform: uppercase;
+    background-color: #a7a7a7;
 }
 
 .masthead {
@@ -62,7 +69,7 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 25vh;
     width: 100%;
 }
 
@@ -70,14 +77,15 @@ body {
     background-color: #445261;
     color: white;
     position: relative;
+    border-radius: 50px 50px 0 0;
 }
 
-.masthead-image {
+/* .masthead-image {
     position: relative;
     overflow: hidden;
-}
+} */
 
-.masthead-image:after {
+/* .masthead-image:after {
     content: "";
     position: absolute;
     top: 0;
@@ -89,7 +97,7 @@ body {
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
-}
+} */
 
 .post-link {
     text-decoration: none;
@@ -102,7 +110,7 @@ body {
 }
 
 .post-topic {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 5%;
 }
 
@@ -115,6 +123,7 @@ body {
 .btn-edit {
     background-color: #188181;
     color: #fff;
+    max-width: 150px;
 }
 
 .btn-signup:hover,
@@ -143,6 +152,7 @@ body {
 .btn-delete {
     color: #fff;
     background: #E84610;
+    max-width: 150px;
 }
 
 .btn-like:hover,
@@ -159,3 +169,5 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+/* Back to top button */
