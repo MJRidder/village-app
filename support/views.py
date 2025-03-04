@@ -3,7 +3,7 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Support, Respond
-from .forms import RespondForm
+from .forms import RespondForm, SupportForm
 
 
 class SupportList(generic.ListView):
@@ -99,3 +99,48 @@ def reply_delete(request, slug, reply_id):
             request, messages.ERROR, 'You can only delete your own replies!')
 
     return HttpResponseRedirect(reverse('support_detail', args=[slug]))
+
+
+def support_post(request, slug):
+    """
+    Display the user Support post page :model:`support.Support`.
+
+    **Context**
+
+    ``support``
+        An instance of :model:`support.Support`.
+
+    **Template:**
+
+    :template:`support/support_post.html`
+    """
+
+    queryset = Support.objects.filter(status=1)
+    supportPage = get_object_or_404(queryset, slug=slug)
+    replies = supportPage.replies.all().order_by("-created_on")
+    reply_count = supportPage.replies.filter(approved=True).count()
+
+    if request.method == "POST":
+        reply_form = SupportForm(data=request.POST)
+        if reply_form.is_valid():
+            reply = reply_form.save(commit=False)
+            reply.parent = request.user
+            reply.support = supportPage
+            reply.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Comment submitted and awaiting approval'
+            )
+
+    reply_form = RespondForm()
+
+    return render(
+        request,
+        "support/support_post.html",
+        {
+            "support": supportPage,
+            "replies": replies,
+            "reply_count": reply_count,
+            "reply_form": reply_form,
+        },
+    )
