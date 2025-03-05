@@ -1,4 +1,5 @@
 from django import forms
+from django.utils.text import slugify
 from .models import Respond, Support
 
 
@@ -13,13 +14,15 @@ class SupportForm(forms.ModelForm):
         model = Support
         fields = (
                     'topic',
-                    'slug',
-                    'parent',
                     'content',
-                    # 'created_on',
-                    # 'updated_on',
                     'region',
                     'age_group',
                     'type_of_request',
-                    'status',
                 )
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        instance.slug = slugify(instance.topic)
+        if commit:
+            instance.save()
+        return instance

@@ -4,7 +4,130 @@
 
 {% block content %}
 
-<p>Hello World!</p>
+<div class="masthead-fluid mb-4">
+  <div class="container">
+      <div class="row g-0">
+          <div class="col masthead-text">
+            <div class="div">
+
+
+              <div class="card-body">
+                {% if user.is_authenticated %}
+                <h3>Add your Support post below</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form id="supportForm" method="post" style="margin-top: 0.5em;">
+  
+                  <!-- Using the formset
+                  {{ form.as_p }} -->
+
+                  {{ support_form | crispy }}
+                  {% csrf_token %}
+                    
+                  <button id="submitButton" type="submit"
+                  class="btn btn-signup btn-lg">Submit</button>
+                </form> 
+                {% else %}
+                <p>Log in to leave a reply</p>
+                <!-- IMPORT - need to add a link to sign in/register here -->
+                {% endif %}
+              </div>
+
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Creating New Replies -->
+ <div class="row">
+    <div class="col">
+        <div class="card-body">
+          {% if user.is_authenticated %}
+          <h3>Leave your reply here:</h3>
+          <p>Posting as: {{ user.username }}</p>
+          <form id="respondForm" method="post"
+            style="margin-top: 0.5em;">
+            {{ reply_form | crispy }}
+            {% csrf_token %}
+            <button id="submitButton" type="submit"
+              class="btn btn-signup btn-lg">Submit</button>
+          </form>
+          {% else %}
+          <p>Log in to leave a reply</p>
+          <!-- IMPORT - need to add a link to sign in/register here -->
+          {% endif %}
+        </div>
+    </div>
+ </div>
+
+ <!-- Displaying Replies - based on views.py-->
+<div class="row">
+  <div class="col">
+    <h3>Replies:</h3>
+    <div class="card-body">
+      {% for reply in replies %}
+      <div class="p-2 card mb-1 comments
+        {% if not reply.approved and reply.parent == user %}
+        faded{% elif not reply.approved %} d-none{% endif %}">
+        <p class="font-weight-bold">
+          {{ reply.parent }}
+          <span class="font-weight-normal">
+            {{ reply.created_on }}
+          </span> wrote:
+        </p>
+        <div id="reply{{ reply.id }}">
+          {{ reply.body | linebreaks }}
+        </div>
+        {% if not reply.approved and reply.parent == user %}
+        <p class="approval">
+          This reply is awaiting approval
+        </p>
+        {% endif %}
+        <!-- Deleting & Editing replies -->
+        {% if user.is_authenticated and reply.parent == user %}
+        <div class="row">
+          <div class="col-1">
+            <button class="btn btn-delete"
+            reply_id="{{ reply.id }}">Delete</button>
+          </div>
+          <div class="col-1">
+            <button class="btn btn-edit"
+            reply_id="{{ reply.id }}">Edit</button>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      <!-- Our for loop ends here -->
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1"
+aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"
+        id="deleteModalLabel">Delete reply?</h5>
+      <button type="button" class="btn-close"
+        data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      Are you sure you want to delete your reply?
+      This action cannot be undone.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary"
+        data-bs-dismiss="modal">Close</button>
+      <a id="deleteConfirm" href="#" class="btn
+        btn-danger">Delete</a>
+    </div>
+  </div>
+</div>
+</div>
 
 {% endblock content %}
 

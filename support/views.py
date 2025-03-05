@@ -101,14 +101,11 @@ def reply_delete(request, slug, reply_id):
     return HttpResponseRedirect(reverse('support_detail', args=[slug]))
 
 
-def help_center(request):
-    """ Render a help center page with FAQs """
-    return render(request, 'support/help_center.html')
-
-def support_post(request, slug):
+def support_post(request):
 
     """
-    Display an individual :model:`support.Support`.
+    Display the page where a user can create a Support post 
+    :model:`support.Support`.
 
     **Context**
 
@@ -117,35 +114,25 @@ def support_post(request, slug):
 
     **Template:**
 
-    :template:`support/support_detail.html`
+    :template:`support/support_post.html`
     """
 
-    queryset = Support.objects.filter(status=1)
-    supportPage = get_object_or_404(queryset, slug=slug)
-    replies = supportPage.replies.all().order_by("-created_on")
-    reply_count = supportPage.replies.filter(approved=True).count()
-
     if request.method == "POST":
-        reply_form = RespondForm(data=request.POST)
-        if reply_form.is_valid():
-            reply = reply_form.save(commit=False)
-            reply.parent = request.user
-            reply.support = supportPage
-            reply.save()
+        support_form = SupportForm(data=request.POST)
+        if support_form.is_valid():
+            userpost = support_form.save(commit=False)
+            userpost.parent = request.user
+            userpost.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Comment submitted and awaiting approval'
+                'Your Support post has been submitted and awaiting approval'
             )
 
-    reply_form = RespondForm()
+    support_form = SupportForm()
 
     return render(
         request,
-        "support/support_detail.html",
+        'support/support_post.html',
         {
-            "support": supportPage,
-            "replies": replies,
-            "reply_count": reply_count,
-            "reply_form": reply_form,
-        },
-    )
+            "support_form": support_form
+        })
