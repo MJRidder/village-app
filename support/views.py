@@ -101,9 +101,14 @@ def reply_delete(request, slug, reply_id):
     return HttpResponseRedirect(reverse('support_detail', args=[slug]))
 
 
+def help_center(request):
+    """ Render a help center page with FAQs """
+    return render(request, 'support/help_center.html')
+
 def support_post(request, slug):
+
     """
-    Display the user Support post page :model:`support.Support`.
+    Display an individual :model:`support.Support`.
 
     **Context**
 
@@ -112,7 +117,7 @@ def support_post(request, slug):
 
     **Template:**
 
-    :template:`support/support_post.html`
+    :template:`support/support_detail.html`
     """
 
     queryset = Support.objects.filter(status=1)
@@ -121,7 +126,7 @@ def support_post(request, slug):
     reply_count = supportPage.replies.filter(approved=True).count()
 
     if request.method == "POST":
-        reply_form = SupportForm(data=request.POST)
+        reply_form = RespondForm(data=request.POST)
         if reply_form.is_valid():
             reply = reply_form.save(commit=False)
             reply.parent = request.user
@@ -136,7 +141,7 @@ def support_post(request, slug):
 
     return render(
         request,
-        "support/support_post.html",
+        "support/support_detail.html",
         {
             "support": supportPage,
             "replies": replies,
