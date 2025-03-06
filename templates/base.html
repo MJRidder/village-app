@@ -2,6 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'support_post' as supportpost_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -32,8 +33,8 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-yellow">
+        <div class="container-fluid" style="background-color: #f3e290;">
             <a class="navbar-brand" href="{% url 'home' %}"><span class="red-o">It Takes A Village</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,35 +43,30 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}"
+                            aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a
-                          class="nav-link
-                          {% if request.path == about_url %}active{%endif%}"
-                          aria-current="page"
-                          href="{% url 'about' %}"
-                          >About</a
-                        >
-                      </li>
+                        <a class="nav-link {% if request.path == about_url %}active{%endif%}"
+                            aria-current="page" href="{% url 'about' %}">About</a>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
+                            aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-warning btn-outline-dark" aria-current="page"
-                            href="{% url 'support_post' %}">Create Support Post</a>
+                        <a class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-warning btn-outline-dark"
+                            aria-current="page" href="{% url 'support_post' %}">Create Support Post</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
+                            aria-current="page" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}"
+                            aria-current="page" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
                 </ul>

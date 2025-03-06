@@ -53,7 +53,7 @@ def support_detail(request, slug):
             "replies": replies,
             "reply_count": reply_count,
             "reply_form": reply_form,
-        },
+        }
     )
 
 

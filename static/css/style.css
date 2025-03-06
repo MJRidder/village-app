@@ -186,4 +186,19 @@ body {
     color: rgb(222, 146, 168);
 }
 
-/* Back to top button */
+#support_post_error {
+    font-size: 150%;
+    justify-content: center;
+    text-align: center;
+    padding: 20% 5%;
+}
+
+#reply_error {
+    width: 100%;
+    color: white;
+    background-color: #445261;
+    border-radius: 25px;
+    justify-content: center;
+    text-align: center;
+    padding: 1% 20%;
+}

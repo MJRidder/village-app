@@ -15,11 +15,22 @@
 
 * [Criteria](#criteria)
 * [UXD (User Experience Design) ](#user-experience-ux)
-   * [User Stories](#user-stories)
+* [User Stories](#user-stories)
+* [Wireframes](#Wireframes)
+* [Design](#Design)
+* [Features](#Features)
+* [Platform Goals](#platform-goals)
+* [Deployment](#Deployment)
+* [Future Features](#future-features)
+* [Tech Stack](#tech-stack)
+* [Testing](#testing)
+* [Tools](#tools)
+* [Credits](#credits)
+
 
 ---
 
-### **Criteria - Learning outcomes**  
+# **Criteria - Learning outcomes**  
 
 1. L01 - Project planning
 Use an Agile methodology to plan and design a Full-Stack Web application using an MVC framework and related contemporary technologies.
@@ -39,14 +50,14 @@ Use a distributed version control system and a repository hosting service to doc
 6. L06 - Online hosting & end product
 Deploy a Full-Stack Web application using an MVC framework and related contemporary technologies to a cloud-based platform
 
-7. Custom data model
+7. L07 - Custom data model
 Understand and use object-based software concepts
 
 [Back to Table of Contents](#table-of-contents)
 
 ---
 
-## User Experience (UX)  
+# **User Experience (UX)**  
 
 ### Primary Goal
 
@@ -60,7 +71,7 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
     *. Education: A future use of Village would be to educate parents on some of the essesntials of parenting. Although there is not ONE way to do it right, there are several ways how NOT to parent. Providing guidance, where possible locally inspired can be a huge help to parents of children of all ages.
 
-### **First Time Users**
+### First Time Users
 
 - New users can access can read through existing support posts to see that they are not alone and to see how other parents would have solved similar challenges
 
@@ -70,7 +81,7 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
 - New users have the option to not interact at all, but just to learn from their fellow parents
 
-### **Returning Users** 
+### Returning Users
 
 - Returning users will find the same support posts and can interact with them ones logged in
 
@@ -84,7 +95,7 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
 ---
 
-## User Stories
+# **User Stories**
 (************ SEE HAVEN EXAMPLES)
 
 [Back to Table of Contents](#table-of-contents)
@@ -98,7 +109,7 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 ![Pages](EXCEL SHEET SCREENSHOT.png)
 
 
-# Wireframes (******** TO BE UPDATED)
+# **Wireframes** (******** TO BE UPDATED)
 
 <details open>
 <summary>Wireframe - Mobile - Front Page & Report </summary>  
@@ -129,13 +140,13 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
 ---
 
-# Design (******** TO BE UPDATED)
+# **Design** (******** TO BE UPDATED)
 
-  # Colour Scheme
+  ### Colour Scheme
 
   ![colours](readmedocs/colours.png)
 
-  # Typography
+  ### Typography
 
 [Montserrat](https://fonts.google.com/specimen/Montserrat)
 
@@ -145,7 +156,7 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
 ---
 
-# Features
+# **Features**
 
 ### Navbar
  
@@ -154,7 +165,6 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 ### Footer
 
  ![Footer](readmedocs/footer.png)
-
 
 
 ### Support posting list
@@ -220,7 +230,7 @@ The aim of Village is to create interaction. To connect parents locally. The rep
 
 ---
 
-# **Goal**   
+# **Platform Goals**   
 
 THe primary goal of "It Takes A Village" is to provide a 'digital' Village, to create location-based connections between parents, that will lead to supportive relationships with your physicaly neighbors. The website will achieve this by having location based support posts, allow for age group filtering and driving interactiong between parents on the posts through replies.
 
@@ -247,22 +257,22 @@ THe primary goal of "It Takes A Village" is to provide a 'digital' Village, to c
     - Provide resources and experiences for parents from other parents
     - Link to local support structures and or useful companies
 
-## Problem Statement
+### Problem Statement
 Raising a child can be hard, raising several children even more so. With both parents often working, having busy lives and often living away from family. Having your local support structure in place, can mean the difference between a happy house hold, or one that struggles. Many parents lack the time and tools to connect with other parents in their region, or have no awareness of the amount of parents locally that deal with the same.
 
-## Objective(s)
+### Objective(s)
 - To create a secure and user-friendly platform that provides a place for parents to connect with others, find support and offer help where possible.
 - To provide a safe space for parents to share experiences and ask for help
 - Create local communities (Villages) that make the lives easier of the parent and the child
 
-## Target Audience
+### Target Audience
 - Parents of children of all ages
 - Parents that do not have a local support structure in place
 - Parents that look for connecting with other parents
 - Parents looking for support in their day-to-day
 - Parents in general, looking for specific situations and how they would have been resolved 
 
-## Benefits
+### Benefits
 - **Empowerment**: Being able to build/choose your own 'family'/Village and support structure. Take control of your struggles, together with others.
 - **Awareness**: Knowing that there are other parents also struggling, also looking for help and also willing to reach out and connect.
 - **Encouragement**: You are not alone.
@@ -273,7 +283,7 @@ Raising a child can be hard, raising several children even more so. With both pa
 
 ---
 
-# Deployment
+# **Deployment**
 
 GitHub was used to deploy the website. These were the steps taken to achieve this:
 
@@ -312,7 +322,7 @@ By forking the GitHub Repository, we make a copy of the original repository on o
 
 ---
 
-## Future Features  
+# **Future Features**
 
 As the platform evolves, we aim to introduce additional features to enhance its functionality and expand its impact.  
 
@@ -374,15 +384,15 @@ Clarity on topics that are relevant, no rudeness, foul language and/or hatespeec
 
 ---
 
-# Tech Stack
+# **Tech Stack**
 
-## Languages Used 
+### Languages Used 
 - HTML
 - CSS
 - Python
 - JavaScript (?)
 
-## Frameworks, Libraries, Technologies & Programs Used
+### Frameworks, Libraries, Technologies & Programs Used
 - Bootstrap
 - Crispy
 - Django
@@ -393,9 +403,9 @@ Clarity on topics that are relevant, no rudeness, foul language and/or hatespeec
 
 ---
 
-# Testing (****** TESTING TO BE COMPLETED STILL)
+# **Testing** (****** TESTING TO BE COMPLETED STILL)
 
-## HTML Validation
+### HTML Validation
 
 ### index.html
 
@@ -413,11 +423,11 @@ Clarity on topics that are relevant, no rudeness, foul language and/or hatespeec
 
 ![contact.html validation](readmedocs/contact.png)
 
-## CSS Validation
+### CSS Validation
 
 ![style.css validation](readmedocs/css.png)
 
-## JS Validation
+### JS Validation
 
 ### script.js
 
@@ -427,7 +437,7 @@ Clarity on topics that are relevant, no rudeness, foul language and/or hatespeec
 
 ![escape.js validation](readmedocs/escapejs.png)
 
-## Lighthouse 
+### Lighthouse 
 
 ### Desktop
 ![Desktop](readmedocs/lighthouse.png)
@@ -459,13 +469,13 @@ Clarity on topics that are relevant, no rudeness, foul language and/or hatespeec
 | [Youtube](https://www.youtube.com/watch?v=Jyvffr3aCp0) | HTML | Bootstrap usage |
 | [Stack Overflow](https://stackoverflow.com/) | Coding | Django Functionality |
 
-# **🌟 Credits** 
+## **Credits** 
 
 - 2025 January CI Hackathon project HAVEN - ReadMe inspiration
 - Code Institute - Django Blog inspired general concept
 - [Reddit](https://www.reddit.com/) for laytout inspiration
 
-# **Shout outs**
+## **Shout outs**
 
 - I would like to thank Rory Patrick Sheridan for his support during this project. He Guided me at the start with determining the direction and the aim of the project. ... [to be continued]
 

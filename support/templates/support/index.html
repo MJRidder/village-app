@@ -1,4 +1,6 @@
-{% extends "base.html" %}
+{% extends 'base.html' %} 
+{% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -11,7 +13,7 @@
 <div class="container-fluid">
 
     <div class="row">
-        <!-- Blog Entries Column -->
+        <!-- Support Entries Column -->
         <div class="col-10 mx-auto">
             <div class="row mb-2">
                 {% for support in support_list %}
@@ -27,6 +29,10 @@
                             <p class="card-text">{{ support.content|slice:":200" }}<span>...</span></p>
                             <hr />
                             <p class="card-text text-muted h6">{{ support.created_on}}
+                                <strong class="text-secondary">
+                                    <i class="far fa-comments"></i> {{ support.reply_count }}
+                                    <!-- no amount of replies are shown, have to link it to views through url% -->
+                                </strong>
                             </p>
                         </div>
                     </div>
