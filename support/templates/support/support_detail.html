@@ -5,7 +5,7 @@
 {% block content %}
 <div class="masthead-fluid mb-4">
     <div class="container">
-        <div class="row g-0">
+        <div class="row col-12 mx-auto">
             <div class="col masthead-text">
                 <h1 class="post-topic">{{ support.topic }}</h1>
                 <p class="post-subtitle">{{ support.parent }} | {{ support.created_on }}</p>
@@ -16,7 +16,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col mb-10  mt-8 left  top">
+        <div class="col-12 mx-auto  mt-8 left  top">
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <p class="card-text">
@@ -27,12 +27,15 @@
     </div>
       <!-- Displaying count of Responses -->
   <div class="row">
-    <div class="col-12">
+    <div class="col-1 text-end">
       <strong class="text-secondary">
         <i class="far fa-comments"></i> {{ reply_count }}
       </strong>
     </div>
-    <div class="col-12">
+    <div class="col-11">
+      <p class="post-subtitle">{{ support.parent }} | {{ support.created_on }}</p>
+    </div>
+    <div class="col-10 mx-auto">
       <hr>
     </div>
   </div>
@@ -44,8 +47,7 @@
             {% if user.is_authenticated %}
             <h3>Leave your reply here:</h3>
             <p>Posting as: {{ user.username }}</p>
-            <form id="respondForm" method="post"
-              style="margin-top: 0.5em;">
+            <form id="respondForm" method="post">
               {{ reply_form | crispy }}
               {% csrf_token %}
               <button id="submitButton" type="submit"
@@ -85,14 +87,10 @@
           <!-- Deleting & Editing replies -->
           {% if user.is_authenticated and reply.parent == user %}
           <div class="row">
-            <div class="col-1">
               <button class="btn btn-delete"
               reply_id="{{ reply.id }}">Delete</button>
-            </div>
-            <div class="col-1">
               <button class="btn btn-edit"
               reply_id="{{ reply.id }}">Edit</button>
-            </div>
           </div>
           {% endif %}
         </div>

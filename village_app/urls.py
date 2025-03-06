@@ -23,7 +23,6 @@ urlpatterns = [
         'about.urls'), name='about-urls'),
     path('', include(
         'support.urls'), name='support-urls'),
-    path('support_post/', include('support.urls'), name='support-urls'),
     path('accounts/', include(
         'allauth.urls')),
     path('summernote/', include(

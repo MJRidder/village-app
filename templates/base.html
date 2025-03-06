@@ -60,8 +60,8 @@
                             href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == supportpost_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'support_post' %}">Create post</a>
+                        <a class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-warning btn-outline-dark" aria-current="page"
+                            href="{% url 'support_post' %}">Create Support Post</a>
                     </li>
                     {% else %}
                     <li class="nav-item">

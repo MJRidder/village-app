@@ -69,12 +69,11 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 25vh;
     width: 100%;
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #188181;
     color: white;
     position: relative;
     border-radius: 50px 50px 0 0;
