@@ -84,7 +84,7 @@ def reply_edit(request, slug, reply_id):
 
 def reply_delete(request, slug, reply_id):
     """
-    view to delete a reply
+    view to delete a reply 
     """
     queryset = Support.objects.filter(status=1)
     supportPage = get_object_or_404(queryset, slug=slug)
@@ -104,7 +104,7 @@ def reply_delete(request, slug, reply_id):
 def support_post(request):
 
     """
-    Display the page where a user can create a Support post 
+    Display the page where a user can create a Support post
     :model:`support.Support`.
 
     **Context**
