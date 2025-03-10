@@ -202,3 +202,7 @@ body {
     text-align: center;
     padding: 1% 20%;
 }
+
+#msg {
+    background-color: #E84610;
+}

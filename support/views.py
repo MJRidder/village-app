@@ -74,10 +74,10 @@ def reply_edit(request, slug, reply_id):
             reply.approved = False
             reply.save()
             messages.add_message(
-                request, messages.SUCCESS, 'Reply Updated!')
+                request, messages.SUCCESS, 'Your reply has been updated!')
         else:
             messages.add_message(
-                request, messages.ERROR, 'Error updating reply!')
+                request, messages.ERROR, 'hmm.. We seem to be unable to update your reply. Please try again.')
 
     return HttpResponseRedirect(reverse('support_detail', args=[slug]))
 
@@ -93,7 +93,7 @@ def reply_delete(request, slug, reply_id):
     if replies.parent == request.user:
         replies.delete()
         messages.add_message(
-            request, messages.SUCCESS, 'Reply deleted!')
+            request, messages.SUCCESS, 'Your reply has been deleted!')
     else:
         messages.add_message(
             request, messages.ERROR, 'You can only delete your own replies!')
@@ -102,7 +102,6 @@ def reply_delete(request, slug, reply_id):
 
 
 def support_post(request):
-
     """
     Display the page where a user can create a Support post
     :model:`support.Support`.
@@ -125,7 +124,7 @@ def support_post(request):
             userpost.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Your Support post has been submitted and awaiting approval'
+                'Your Support post has been submitted and is awaiting approval.'
             )
 
     support_form = SupportForm()
