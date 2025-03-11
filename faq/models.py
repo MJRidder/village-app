@@ -1,14 +1,7 @@
 from django.db import models
 
-PRIORITY = (
-    (0, "Top asked question"),
-    (1, "Standard ask"),
-    (2, "Minor ask")
-)
-
 
 class Faq(models.Model):
-    priority = models.IntegerField(choices=PRIORITY, default=0)
     question = models.CharField(max_length=400)
     slug = models.SlugField(max_length=200, unique=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -91,12 +84,6 @@ class Faq(models.Model):
     ]
     age_group = models.CharField(
         choices=AGES, default=Not_Specified, max_length=30)
-
-    # type_of_request Charfield content
-    Not_Specified = "not specified"
-    Offering_Help = "Offering help"
-    Asking_Help = "Asking help"
-    Sharing_Tips_and_Tricks = "Sharing tips & tricks"
 
     # CATEGORY = [list of different categories]
     # category = models.CharField(

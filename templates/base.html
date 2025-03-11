@@ -2,6 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'faq' as faq_url %}
 {% url 'support_post' as supportpost_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -50,14 +51,14 @@
                         <a class="nav-link {% if request.path == about_url %}active{%endif%}"
                             aria-current="page" href="{% url 'about' %}">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == faq_url %}active{% endif %}"
+                            aria-current="page" href="{% url 'faq' %}">FAQ</a>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
                             aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-warning btn-outline-dark"
-                            aria-current="page" href="{% url 'support_post' %}">Create Support Post</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -71,6 +72,10 @@
                     {% endif %}
                 </ul>
                 {% if user.is_authenticated %}
+                <li class="navbar-nav nav-item">
+                    <a class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-warning btn-outline-dark"
+                        aria-current="page" href="{% url 'support_post' %}">Create Support Post</a>
+                </li>
                 <p class="text-end m-3">You are logged in as {{ user }}</p>
                 {% else %}
                 <p class="text-end m-3">You are not logged in</p>
