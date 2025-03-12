@@ -9,8 +9,20 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
+#navbar-logo {
+
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 25%;
+}
+
+.nav-item {
+    margin-top: 0px;
+    font-size: 120%;
+}
+
+.green-o {
+    color: #166020;
 }
 
 .thin {
@@ -33,10 +45,6 @@ body {
     background-color: transparent;
 }
 
-/* .image-container {
-    position: relative;
-} */
-
 .index-header {
     width: 100%;
     background-color: #e1b123;
@@ -56,7 +64,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
+    background-color: #166020;
     border-radius: 25px 25px 0 0;
 }
 
@@ -90,30 +98,11 @@ body {
 
 .masthead-text {
     margin-top: 10px;
-    background-color: #188181;
+    background-color: #166020;
     color: white;
     position: relative;
     border-radius: 50px 50px 0 0;
 }
-
-/* .masthead-image {
-    position: relative;
-    overflow: hidden;
-} */
-
-/* .masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-} */
 
 .post-link {
     text-decoration: none;
@@ -148,6 +137,11 @@ body {
     color: #23BBBB;
 }
 
+.btn-success {
+    background-color: #166020;
+    color: white;
+}
+
 .link {
     color: #23BBBB;
     text-decoration: none;
@@ -178,6 +172,13 @@ body {
     border: none;
 }
 
+.btn-back {
+    background-color: #d8d8d8;
+    color: black;
+    padding: 0 30px;
+    border-radius: 12px;
+}
+
 .faded {
     color: rgb(172, 175, 175);
 }
@@ -201,4 +202,9 @@ body {
     justify-content: center;
     text-align: center;
     padding: 1% 20%;
+}
+
+#msg {
+    background-color: #71d5ee;
+    border: #e1b123;
 }
