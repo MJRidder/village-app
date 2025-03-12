@@ -6,7 +6,7 @@ from .models import Support
 
 
 class TestSupportPostViews(TestCase):
-    # Pre-setup a superuser for tests & Give detail to a support post
+    """Pre-setup a superuser for tests & Give detail to a support post"""
     def setUp(self):
         self.user = User.objects.create_superuser(
             username="myUsername",
@@ -22,8 +22,8 @@ class TestSupportPostViews(TestCase):
         )
         self.support.save()
 
-    # Is the posting of a support request functional?
     def test_render_support_detail_page_with_comment_form(self):
+        """Is the posting of a support request functional?"""
         response = self.client.get(reverse(
             'support_detail', args=['support-topic']))
         self.assertEqual(response.status_code, 200)
@@ -46,3 +46,26 @@ class TestSupportPostViews(TestCase):
             b'This reply is awaiting approval',
             response.content
         )
+
+
+# class TestSupportPost(TestCase):
+#     """Creates test user & support post content"""
+#     def setUp(self):
+#         self.user = User.objects.create_user(
+#             username="myUsername",
+#             password="myPassword",
+#             email="test@test.com")
+
+#         self.support_post = Support(
+#             topic="The question that I have",
+#             content="This is the context behind my question")
+#         self.support_post.save()
+
+#     def test_render_support_post_page_with_user_form(self):
+#         """Verifies get request for support post page
+#         containing a support post user form"""
+#         response = self.client.get(reverse('support'))
+#         self.assertEqual(response.status_code, 200)
+#         self.assertIn(b'The question that I have', response.content)
+#         self.assertIsInstance(
+#             response.context['support_form'], RespondForm)

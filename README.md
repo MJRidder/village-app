@@ -1,7 +1,5 @@
-# It Takes A Village
 
-
-![Header image](headerimage.link)
+![Header image](/static/images/README-header.png)
 ## It Takes A Village (V - Village)
 
 ![Front page screenshot](Front page screenshot.link)
@@ -468,6 +466,7 @@ Clarity on topics that are relevant, no rudeness, foul language and/or hatespeec
 | [W3schools](https://www.youtube.com/watch?v=riDzcEQbX6k) | Coding | Django Functionality |
 | [Youtube](https://www.youtube.com/watch?v=Jyvffr3aCp0) | HTML | Bootstrap usage |
 | [Stack Overflow](https://stackoverflow.com/) | Coding | Django Functionality |
+| [havenshelter](https://www.havenshelter.org) | Media | Logo placeholder |
 
 ## **Credits** 
 
