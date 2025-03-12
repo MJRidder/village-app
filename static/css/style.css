@@ -201,10 +201,14 @@ body {
     border-radius: 25px;
     justify-content: center;
     text-align: center;
-    padding: 1% 20%;
+    padding: 1% 5%;
 }
 
 #msg {
     background-color: #71d5ee;
     border: #e1b123;
+}
+
+.footer-img > i {
+    color: white;
 }
