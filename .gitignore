@@ -3,4 +3,3 @@ venv.py
 __pycache__/
 .github/
 support/fixtures/
-deactivate
