@@ -137,6 +137,11 @@ body {
     color: #23BBBB;
 }
 
+.btn-success {
+    background-color: #166020;
+    color: white;
+}
+
 .link {
     color: #23BBBB;
     text-decoration: none;

@@ -1,7 +1,10 @@
 from django.db import models
 
 
-class About(models.Model):
+class About(models.Model):   
+    """
+    Stores the About ITAV content.
+    """
     title = models.CharField(max_length=200)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
@@ -11,6 +14,9 @@ class About(models.Model):
 
 
 class CollaborateRequest(models.Model):
+    """
+    Contains the contact webform information.
+    """
     name = models.CharField(max_length=200)
     topic = models.CharField(max_length=200)
 

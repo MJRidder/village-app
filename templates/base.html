@@ -75,7 +75,7 @@
                 {% if user.is_authenticated %}
                 <p class="text-end m-3">You are logged in as {{ user }}</p>
                 <li class="navbar-nav nav-item">
-                    <a class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-warning btn-outline-dark"
+                    <a class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-info"
                         aria-current="page" href="{% url 'support_post' %}">Create Support Post</a>
                 </li>
                 {% else %}
