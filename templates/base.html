@@ -35,9 +35,9 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-yellow">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-yellow">
         <div class="container-fluid" style="background-color: #f3e290;">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="red-o">It Takes A Village</span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><img id="navbar-logo" src="/static/images/ITAB logo.jpg" alt="It Takes A Village logo"><span class="green-o">   IT TAKES A VILLAGE</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -73,11 +73,11 @@
                     {% endif %}
                 </ul>
                 {% if user.is_authenticated %}
+                <p class="text-end m-3">You are logged in as {{ user }}</p>
                 <li class="navbar-nav nav-item">
                     <a class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-warning btn-outline-dark"
                         aria-current="page" href="{% url 'support_post' %}">Create Support Post</a>
                 </li>
-                <p class="text-end m-3">You are logged in as {{ user }}</p>
                 {% else %}
                 <p class="text-end m-3">You are not logged in</p>
                 {% endif %}
