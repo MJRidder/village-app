@@ -232,6 +232,9 @@ Footer referencing Copyright and the option to add the multiple social media pla
 
 When arriving at the homepage of ITAV, the user immediately arrives at the support post list. This to ensure minimum amount of steps are needed for the user to get what they came for.
 
+### Pagination
+With "Next" and "PREV" buttons, the pages are limited to 10 support posts. This to increase loading times and reduce clutter.
+
 ### Support posting Form
 <details open>
 <summary>Support post Form </summary>  
