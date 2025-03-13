@@ -1,5 +1,5 @@
 
-![Header image](/static/images/README-header.png)
+![Header image](/static/images/README-images/README-header.png)
 ## It Takes A Village (V - Village)
 
 ![Front page screenshot](Front page screenshot.link)
@@ -107,32 +107,62 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 ![Pages](EXCEL SHEET SCREENSHOT.png)
 
 
-# **Wireframes** (******** TO BE UPDATED)
+# **Wireframes**
 
 <details open>
-<summary>Wireframe - Mobile - Front Page & Report </summary>  
+<summary>Wireframe - Mobile - Homepage </summary>  
 
-![wireframe - Mobile - Front Page & Report](readmedocs/wf.png)
+![Wireframe - Mobile - Homepage](/static/images/README-images/wireframe-v-mobile-homepage.png)
 </details> 
 
 <details>
-<summary>Wireframe - Mobile - Contact Us Page  </summary>  
+<summary>Wireframe - Mobile - Support Post detail page  </summary>  
 
-![wireframe - Mobile - Contact Us Page](readmedocs/wf1.png)
+![Wireframe - Mobile - Support Post detail page](/static/images/README-images/wireframe-v-mobile-post-detail-page.png)
 </details> 
 
 <details>
-<summary>Wireframe - Mobile - Resourse Page  </summary>  
+<summary>Wireframe - Mobile - About page  </summary>  
 
-![wireframe - Mobile - Full Front Page](readmedocs/wf2.png)
+![Wireframe - Mobile - About page](/static/images/README-images/wireframe-v-mobile-about-page.png)
 </details> 
 
 <details>
-<summary>Wireframe - Mobile - Desktop home page </summary>  
+<summary>Wireframe - Mobile - Contact us page </summary>  
 
-![wireframe - Mobile - Desktop home page](readmedocs/wf3.png)
+![Wireframe - Mobile - Contact us page](/static/images/README-images/wireframe-v-mobile-contact-us-page.png)
 </details> 
 
+<details>
+<summary>Wireframe - Desktop - Homepage </summary>  
+
+![Wireframe - Desktop - Homepage](//static/images/README-images/wireframe-v-desktop-homepage.png)
+</details> 
+
+<details>
+<summary>Wireframe - Desktop - Homepage with categories and advertisements (future) </summary>  
+
+![Wireframe - Desktop - Homepage with categories and advertisements](/static/images/README-images/wireframe-v-desktop-homepage-with-categories-and-advertisement.png)
+</details> 
+
+<details>
+<summary>Wireframe - Desktop - Support Post detail page </summary>  
+
+![Wireframe - Mobile - Contact us page](/static/images/README-images/wireframe-v-desktop-post-detail-page.png)
+</details> 
+
+<details>
+<summary>Wireframe - Desktop - About us page </summary>  
+
+![Wireframe - Desktop - About us page ](/static/images/README-images/wireframe-v-desktop-about-page.png)
+</details> 
+
+<details>
+<summary>Wireframe - Desktop - Contact us page </summary>  
+
+![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+</details> 
+<br>
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -140,11 +170,25 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
 # **Design** (******** TO BE UPDATED)
 
-  ### Colour Scheme
+### Initial website design
+<details>
+<summary>Drawn out page criteria - per page</summary>  
 
-  ![colours](readmedocs/colours.png)
+![Drawn out page criteria - per page](/static/images/README-images/page-design-v-drawn-out-criteria.png)
+</details> 
 
-  ### Typography
+### Initial thought out models and ERPs
+<details>
+<summary>Initial thought out models</summary>  
+
+![Initial thought out models](/static/images/README-images/model-design-v-intitial-thought-out-models.png)
+</details> 
+
+### Colour Scheme
+
+![colours](readmedocs/colours.png)
+
+### Typography
 
 [Montserrat](https://fonts.google.com/specimen/Montserrat)
 
@@ -157,25 +201,58 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 # **Features**
 
 ### Navbar
+
+The Navbar adjusts to the screensize and uses a burger Icon to hide the menu on smaller screens.
  
- ![Navbar](readmedocs/navbar.png)
+ ![Navbar Desktop Not Logged in](/static/images/README-images/navbar-v-desktop-not-logged-in.png)
+ ![Navbar Desktop Logged in](/static/images/README-images/navbar-v-desktop-logged-in.png)
+ ![Navbar mobile](/static/images/README-images/navbar-v-mobile.png)
+ <details>
+<summary>Navbar Mobile menu not logged in</summary>  
+
+![Navbar Mobile menu not logged in](/static/images/README-images/navbar-v-mobile-menu-not-logged-in.png)
+</details> 
+ <details>
+<summary>Navbar Mobile menu logged in</summary>  
+
+![Navbar Mobile menu logged in](/static/images/README-images/navbar-v-mobile-menu-logged-in.png)
+</details> 
+
 
 ### Footer
 
- ![Footer](readmedocs/footer.png)
+Footer referencing Copyright and the option to add the multiple social media platforms.
+
+ ![Footer](/static/images/README-images/footer-v-standard.png)
 
 
 ### Support posting list
 
-1. **Description**:
+ ![Support Post listing](/static/images/README-images/support-post-listing-screenshot.png)
+
+When arriving at the homepage of ITAV, the user immediately arrives at the support post list. This to ensure minimum amount of steps are needed for the user to get what they came for.
+
+### Support posting Form
+<details open>
+<summary>Support post Form </summary>  
+
+![Support post form](/static/images/README-images/support-post-screenshot.png)
+</details> 
+
+A simple form, that allows the user to enter a support post. All fields are required, however only the topic and content fields have not been prepopulated. Therefor the remaining fields can be left as is, unless desired. The form has a "back button" in case the user decides to stop their initial posting effort.
+
+1. **Topic**:
 - Parents have a large field to explain their post. Whichever goal they have, they have the space to explain and indicate what, when and why they would like to ask/give support.
 
-2. **Location**:
+2. **Content**:
+- Parents have a large field to explain their post. Whichever goal they have, they have the space to explain and indicate what, when and why they would like to ask/give support.
+
+3. **Region**:
 - As the main aim is to connect parents locally, location is essential. Currently the website is meant for parents around Dublin, Ireland. Therefore the Dublin regions (Dublin 1-24) can be added.
 - The location/region will be visible to other users, which will help to localise other parents
 - The location/region can be used to filter on relevant support posts.
 
-3. **Age group**:
+4. **Age group**:
 - Parents of children in different age groups, might be in search for other things at different times. Being able to specify the age group that a support post is meant for, will help identify ones support post to the relevant parents.
 - Options are:
     - "Not specified"
@@ -186,7 +263,7 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
     - "Young adult (age 16-24)"
     - "Multiple ages"
 
-4. **Type of Post**
+5. **Type of Post**
 - Parents will come to Village for support, but also to connect and offer help. It is therefore important to clarify the purpose of a post:
     - Support ask: Poster asks for help
     - Support offer: Poster offers help
@@ -194,15 +271,11 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
     - Not Specified: Poster is looking for something that does not falls on any of the above three options
 
 5. **How to Use It**:
-- Start by typing the details of the situation in the description box.
-- Provide the relevant location, age group and the type of post.
+- Provide a clear topic to the post
+- Give the relevant context for the post and explain what outcome is desireable
+- When relevant, provide the location, age group and the type of post.
 - Submit the Support post
 
-<details open>
-<summary>Report Form - Report incident </summary>  
-
-![Support Post](SCREENSHOT.png)
-</details> 
 
 ### Ability to provide support through support replies
 The aim of Village is to create interaction. To connect parents locally. The reply function allows for parents to interact with the posts that they see on Village. To offer help, support and/or information.
@@ -324,8 +397,8 @@ By forking the GitHub Repository, we make a copy of the original repository on o
 
 As the platform evolves, we aim to introduce additional features to enhance its functionality and expand its impact.  
 
-### 1. **Create your own Village (community)**
-The current set up is focused on Dublin only. The It Takes A Village app would allow in the future the ability to create your own Village, with it's own Village moderator. Given the ability to only invite parents that have connected before and know each other. Or leave the joining of the local Village open to a specific area and/or for a specific parent niche. Support posts and replies would be locally managed between the parents that have joined the Village.
+### 1. **Search function**
+Something essential to simplify the use of the platform will be the addition of the search bar. Allowing users to search through existing posts based on keywords and filters. This will greatly ease the use of the platform and make it more convenient to the user to find the relevant posts.
 
 ### 2. **Build your own profile**
 To be able to provide more information about yourself and your family, the Village platform would allow the creation of your own profile/family page. You can then share the page with any parent that you trust. In this way other parents know how they can help and potentially what they could ask from you as well. If your profile says you have a 5 year old? Perhaps there are other 5 year olds in the neighborhood that are looking for another kid to kick a ball with.
@@ -333,11 +406,11 @@ To be able to provide more information about yourself and your family, the Villa
 ### 3. **Profile security**
 Because of the limited security options at the moment, the platform is forced to function on a retalively basic level. Increased security of the contact details and the ability to reach out and ask for contact details directly, should keep away personal information from the public space where this is not desired.
 
-### 4. **Improved filter options**
+### 4. **Filter options**
 Expanded and improved filter options should improve the user experience. Allowing users to only see Support posts relavant for them and filter out any potential clutter. Possible filter improvements are: Looking for playdates, parent specific support, parent connect, siblings, religion, type of activities, Guidance, Education and more.
 
-### 5. **Specific educational content**
-The idea of the It Takes A Village platform is peer-to-peer. This does not mean that general information is not welcome. If there is a platform where parents come together, it is a perfect location for general education and to look for general information. Parents will be able to share, upvote and comment on this information to let others know how useful it was for them.
+### 5. **Create your own Village (community)**
+The current set up is focused on Dublin only. The It Takes A Village app would allow in the future the ability to create your own Village, with it's own Village moderator. Given the ability to only invite parents that have connected before and know each other. Or leave the joining of the local Village open to a specific area and/or for a specific parent niche. Support posts and replies would be locally managed between the parents that have joined the Village.
 
 ### 6. **Specific support Villages**
 Sometimes parents are only looking for a specific type of support. Villages could be set up around specific topics, bringing parents together with specific similar interests. Being able to go in deep into the subject matter with parents of a similar mind.
@@ -377,6 +450,15 @@ External simply games could be linked to the platform. The aim is to make the li
 
 ### 18. **(Expanded) User guidelines**
 Clarity on topics that are relevant, no rudeness, foul language and/or hatespeech are all essential to feeling safe on the platform. When signing on to the It Takes A Village platform, it should be clear to the user what is acceptable or not. With the possibility for the It Takes A Village team, to take action accordingly when this is needed.
+
+### 19. **Specific educational content**
+The idea of the It Takes A Village platform is peer-to-peer. This does not mean that general information is not welcome. If there is a platform where parents come together, it is a perfect location for general education and to look for general information. Parents will be able to share, upvote and comment on this information to let others know how useful it was for them.
+
+### 20. **Showcasing the amount of replies on a support post on the list view**
+The interactivity of a post can mean a lot to the user. Seeing that a support post, placed by another has several replies, can mean that the answer will already have been provided. It is then interesting for a user to interact with these post specifically. Users that are on the platform to help others, can then screen for posts that do not have many replies and provide the answer.
+
+### 21. **User levels/badgesw**
+To reward active participation on the platform, it will be beneficial to award users with specific levels, perks or even visual badges that can be displayed on their profile page and next to their name on the platform. Seeing posts and replies from these type of users can give additional gravitas/weight
  
  [Back to Table of Contents](#table-of-contents)
 
@@ -476,6 +558,6 @@ Clarity on topics that are relevant, no rudeness, foul language and/or hatespeec
 
 ## **Shout outs**
 
-- I would like to thank Rory Patrick Sheridan for his support during this project. He Guided me at the start with determining the direction and the aim of the project. ... [to be continued]
+- I would like to thank Rory Patrick Sheridan for his support during this project. He Guided me at the start with determining the direction and the aim of the project. Helped me along the way by pointing out critical improvements and gave me valuable feedback on how to improve my way of working.
 
 [Back to Table of Contents](#table-of-contents)
