@@ -6,35 +6,34 @@
 
 <!-- index.html content starts here -->
 <div class="index-header">
-    <div class="col-10 mx-auto mt-4">
-        <p>Welcome to "It Takes A Village". The Dublin based community platform created by parents, for parents. Find, connect, help and receive help from parents in your local Dublin region!</p>
+    <div class="col-10 mx-auto">
+        <p>
+            Welcome to "It Takes A Village"! 
+            <br>
+            The Dublin based community platform created by parents, for parents. 
+            <br>
+            Find, connect, help and receive help from parents in your local Dublin region!
+        </p>
     </div>
 </div>
 <div class="container-fluid">
 
     <div class="row"> 
         <!-- Support Entries Column -->
-        <div class="col-10 mx-auto">
+        <div class="col-12 col-sm-10 mx-auto">
             <div class="row mb-2">
                 {% for support in support_list %}
                 <div class="col-12">
-                    <div>
-                        <div class="card-body">
-                            <div class="support-post-header">
-                                <a href="{% url 'support_detail' support.slug %}" class="post-link">
-                                    <h2 class="card-title mb-2 p-2">{{ support.topic }}</h2>
-                                </a>
-                            </div>
-                            <p class="parent mt-1 mb-1 p-1">Parent: {{ support.parent }}</p>
-                            <p class="card-text">{{ support.content|slice:":200" }}<span>...</span></p>
-                            <hr>
-                            <p class="card-text text-muted h6">{{ support.created_on}}
-                                <!-- <strong class="text-secondary">
-                                    <i class="far fa-comments"></i> {{ support.reply_count }}
-                                   ** no amount of replies are shown, have to link it to views through url% **
-                                </strong> -->
-                            </p>
+                    <div class="card-body col-12 col-sm-10 mx-auto">
+                        <div class="support-post-header">
+                            <a href="{% url 'support_detail' support.slug %}" class="post-link">
+                                <h2 class="card-title mb-2 p-2">{{ support.topic }}</h2>
+                            </a>
                         </div>
+                        <p class="parent mt-1 mb-1 p-1">Parent: {{ support.parent }}</p>
+                        <p class="card-text">{{ support.content|slice:":200"|safe }}<span>...</span></p>
+                        <hr>
+                        <p class="card-text text-muted h6">{{ support.created_on}}</p>
                     </div>
                 </div>
             </div>

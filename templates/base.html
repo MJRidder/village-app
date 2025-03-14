@@ -9,7 +9,7 @@
 {% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
-<html class="h-100" lang="en">
+<html lang="en">
 
 <head>
     <title>It Takes a Village platform for parents</title>
@@ -37,8 +37,11 @@
     <!-- Navigation -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-yellow">
         <div class="container-fluid" style="background-color: #f3e290;">
-            <a class="navbar-brand" href="{% url 'home' %}"><img id="navbar-logo" src="/static/images/ITAV-logo.jpg" alt="It Takes A Village logo"><span class="green-o">   IT TAKES A VILLAGE</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img id="navbar-logo" src="/static/images/ITAV-logo.jpg" 
+                alt="It Takes A Village logo"><span class="green-o d-none d-sm-block">IT TAKES A VILLAGE</span>
+            </a>
+            <button class="navbar-toggler pt-1 pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
