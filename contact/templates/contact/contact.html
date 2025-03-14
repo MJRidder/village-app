@@ -1,26 +1,47 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-12 col-md-4 text-center">
-            <img src="/static/images/V-logo.jpg" alt="Logo of It Takes A Village" width="100%">
+    <div class="row justify-content-center">
+        <div class="col-6 col-md-6 my-5">
+            <h2>We’d Love to Hear from You!</h2>
+            <p>Welcome to It Takes a Village, a community built by parents, for parents. 
+                Whether you have questions, collaboration ideas, valuable suggestions, 
+                or just a great parenting tip to share, we’d love to hear from you! 
+                Our platform thrives on the collective wisdom and experiences of parents 
+                like you, and your input helps us grow and support one another.
+            </p>
+            <p>Are you looking for advice, want to contribute, or have a brilliant idea 
+                that could benefit our community? Don’t hesitate to reach out! We are 
+                always open to new perspectives, fresh ideas, and innovative ways to 
+                make parenting a little easier and a lot more rewarding. If you’re an 
+                expert, blogger, or organization interested in working together, we’d 
+                love to explore potential collaborations.
+            </p>
+            <p>Your feedback is invaluable in shaping It Takes a Village into the best 
+                resource it can be. If you have a suggestion for new topics, features, 
+                or resources you’d like to see, let us know! Even the smallest tip or 
+                trick can make a big difference in another parent’s journey.
+            </p>
+            <p>Connecting with us is easy—just drop us a message, and we’ll get back 
+                to you as soon as we can. Together, we can continue building a strong, 
+                supportive, and inspiring community. Because when it comes to parenting, 
+                we all know one thing to be true—it truly takes a village!
+            </p>
         </div>
-        <div class="col-12 col-md-8">
-            <h2>{{ about.title }}</h2>
-            {{ about.content | safe }}
+        <div class="col-6 col-md-6 my-5">
+            <h2>Contact Form</h2>
+            <form id="contactForm" method="post" style="margin-top: 0.5em">
+
+                {{ ContactRequest| crispy }} {% csrf_token %}
+  
+                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">
+                  Submit
+                </button>
+              </form>
         </div>
     </div>
-    <!-- <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <h2>Let's collaborate!</h2>
-            <p>I believe in the power of shared knowledge and collective effort.
-                Whether you have a project in mind, wish to co-author
-                an article, or simply want to brainstorm some ideas,
-                I'm excited to hear from you. Fill out the form
-                and we can get the ball rolling!</p>
-        </div>
-    </div> -->
 </div>
 {% endblock content %}

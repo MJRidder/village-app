@@ -7,13 +7,11 @@ STATUS = (
 )
 
 
-# Create your models here.
 class Support(models.Model):
     """
     Stores a support post
     """
     topic = models.CharField(max_length=200, unique=True)
-    # Ideally the slug attribute is hidden for users
     slug = models.SlugField(max_length=200, unique=True)
     parent = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="support_post"
