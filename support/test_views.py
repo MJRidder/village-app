@@ -64,7 +64,7 @@ class TestSupportPostViews(TestCase):
 #     def test_render_support_post_page_with_user_form(self):
 #         """Verifies get request for support post page
 #         containing a support post user form"""
-#         response = self.client.get(reverse('support'))
+#         response = self.client.get('support',self.support_post)
 #         self.assertEqual(response.status_code, 200)
 #         self.assertIn(b'The question that I have', response.content)
 #         self.assertIsInstance(

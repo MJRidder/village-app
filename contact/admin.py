@@ -3,6 +3,8 @@ from .models import ContactForm
 
 
 @admin.register(ContactForm)
-class CollaborateRequestAdmin(admin.ModelAdmin):
-
+class ContactFormAdmin(admin.ModelAdmin):
+    """
+    Lists received message and read fields for display in admin
+    """
     list_display = ('message', 'read',)

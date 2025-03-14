@@ -3,7 +3,7 @@ from django.db import models
 
 class ContactForm(models.Model):
     """
-    Contains the contact webform information.
+    Stores a single contact webform message.
     """
     name = models.CharField(max_length=200)
     topic = models.CharField(max_length=200)

@@ -55,6 +55,12 @@ body {
     padding-bottom: 2%;
     border-radius: 0 0 12px 12px;
 }
+
+.contact-header {
+    font-size: 140%;
+    font-weight: bold;
+}
+
 .card-title {
     color: whitesmoke;
 }

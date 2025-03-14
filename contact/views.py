@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib import messages
 from .models import ContactForm
+from.forms import ContactRequest
 
 
 def contact(request):
@@ -19,14 +20,15 @@ def contact(request):
     :template:`contact/contact.html`
     """
     if request.method == "POST":
-        contact_form = ContactForm(data=request.POST)
+        contact_form = ContactRequest(data=request.POST)
         if contact_form.is_valid():
             contact_form.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Your message has been received! We hope to get back to you as soon as possible!'
+                'Your message has been received! We hope to get '
+                'back to you as soon as possible!'
             )
-    contact_form = ContactForm()
+    contact_form = ContactRequest()
 
     return render(
         request,
