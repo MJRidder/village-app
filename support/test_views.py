@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.test import TestCase
-from .forms import RespondForm
+from .forms import RespondForm, SupportForm
 from .models import Support
 
 
@@ -48,24 +48,25 @@ class TestSupportPostViews(TestCase):
         )
 
 
-# class TestSupportPost(TestCase):
-#     """Creates test user & support post content"""
-#     def setUp(self):
-#         self.user = User.objects.create_user(
-#             username="myUsername",
-#             password="myPassword",
-#             email="test@test.com")
+class TestSupportPost(TestCase):
+    """Creates test user & support post content"""
+    def setUp(self):
+        self.user = User.objects.create_user(
+            username="myUsername",
+            password="myPassword",
+            email="test@test.com")
 
-#         self.support_post = Support(
-#             topic="The question that I have",
-#             content="This is the context behind my question")
-#         self.support_post.save()
+        self.support_post = Support(
+            topic="The question that I have",
+            content="hesitate",
+            parent=self.user)
+        self.support_post.save()
 
-#     def test_render_support_post_page_with_user_form(self):
-#         """Verifies get request for support post page
-#         containing a support post user form"""
-#         response = self.client.get('support',self.support_post)
-#         self.assertEqual(response.status_code, 200)
-#         self.assertIn(b'The question that I have', response.content)
-#         self.assertIsInstance(
-#             response.context['support_form'], RespondForm)
+    def test_render_support_post_page_with_user_form(self):
+        """Verifies get request for support post page
+        containing a support post user form"""
+        response = self.client.get('/support_post/')
+        self.assertEqual(response.status_code, 200)
+        # self.assertIn(b'Add your', response.content)
+        self.assertIsInstance(
+            response.context['support_form'], SupportForm)
