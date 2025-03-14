@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.contrib import messages
-from .models import ContactForm
-from.forms import ContactRequest
+from .forms import ContactRequest
 
 
 def contact(request):

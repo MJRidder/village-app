@@ -49,16 +49,11 @@ body {
     width: 100%;
     background-color: #e1b123;
     text-align: center;
-    font-size: 120%;
-    font-weight: 120%;
+    font-size: 140%;
+    font-weight: bold;
     padding-top: 2%;
     padding-bottom: 2%;
     border-radius: 0 0 12px 12px;
-}
-
-.contact-header {
-    font-size: 140%;
-    font-weight: bold;
 }
 
 .card-title {
