@@ -37,7 +37,7 @@
     <!-- Navigation -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-yellow">
         <div class="container-fluid" style="background-color: #f3e290;">
-            <a class="navbar-brand" href="{% url 'home' %}"><img id="navbar-logo" src="/static/images/ITAB-logo.jpg" alt="It Takes A Village logo"><span class="green-o">   IT TAKES A VILLAGE</span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><img id="navbar-logo" src="/static/images/ITAV-logo.jpg" alt="It Takes A Village logo"><span class="green-o">   IT TAKES A VILLAGE</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,21 +56,10 @@
                         <a class="nav-link {% if request.path == faq_url %}active{% endif %}"
                             aria-current="page" href="{% url 'faq' %}">FAQ</a>
                     </li>
-                    {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
-                            aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% if request.path == contact_url %}active{% endif %}"
+                            aria-current="page" href="{% url 'contact' %}">Contact</a>
                     </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
-                            aria-current="page" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}"
-                            aria-current="page" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
                 </ul>
                 {% if user.is_authenticated %}
                 <p class="text-end m-3">You are logged in as {{ user }}</p>
@@ -78,8 +67,20 @@
                     <a class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-info"
                         aria-current="page" href="{% url 'support_post' %}">Create Support Post</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
+                        aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                </li>
                 {% else %}
                 <p class="text-end m-3">You are not logged in</p>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
+                        aria-current="page" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == login_url %}active{% endif %}"
+                        aria-current="page" href="{% url 'account_login' %}">Login</a>
+                </li>
                 {% endif %}
             </div>
         </div>

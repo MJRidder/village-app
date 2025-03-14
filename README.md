@@ -94,7 +94,13 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 ---
 
 # **User Stories**
-(************ SEE HAVEN EXAMPLES)
+<details>
+<summary>It Takes a Village user stories</summary>  
+
+[It Takes a Village user stories](https://github.com/users/MJRidder/projects/4/views/1)
+
+</details> 
+
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -168,7 +174,7 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
 ---
 
-# **Design** (******** TO BE UPDATED)
+# **Design**
 
 ### Initial website design
 <details>
@@ -186,11 +192,11 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
 ### Colour Scheme
 
-![colours](readmedocs/colours.png)
+![colours](/static/images/README-images/color-scheme-v.png)
 
 ### Typography
 
-[Montserrat](https://fonts.google.com/specimen/Montserrat)
+[Roboto](https://fonts.google.com/specimen/Roboto)
 
 [Lato](https://fonts.google.com/specimen/Lato)
 

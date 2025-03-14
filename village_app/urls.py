@@ -23,6 +23,8 @@ urlpatterns = [
         'about.urls'), name='about-urls'),
     path('faq/', include(
         'faq.urls'), name='faq-urls'),
+    path('contact/', include(
+        'contact.urls'), name='support-urls'),
     path('', include(
         'support.urls'), name='support-urls'),
     path('accounts/', include(
