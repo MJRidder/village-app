@@ -2,9 +2,8 @@
 ![Header image](/static/images/README-images/README-header.png)
 ## It Takes A Village (V - Village)
 
-![Front page screenshot](Front page screenshot.link)
-
-[View our live project](https://it-takes-a-village-ab7da68f58c4.herokuapp.com/)
+[View the live project](https://it-takes-a-village-ab7da68f58c4.herokuapp.com/)
+![Am I responsive screen views](/static/images/README-images/am-i-responsive-screenshot.png)
 
 ---
 
@@ -289,22 +288,9 @@ A simple form, that allows the user to enter a support post. All fields are requ
 ### Ability to provide support through support replies
 The aim of Village is to create interaction. To connect parents locally. The reply function allows for parents to interact with the posts that they see on Village. To offer help, support and/or information.
 
-### Database (********* ASK IF THIS SHOULD BE ADDED?)
-- The database for this site is hosted....
+### Desktop / Table / Mobile View
 
-### Desktop View
-
-![Desktop](SCREENSHOT.png)
-
-### Tablet View
-
-![Tablet](SCREENSHOT.png)
-
-
-### Mobile View
-
-![mobile](SCREENSHOT.png)
-
+![Am I responsive screen views](/static/images/README-images/am-i-responsive-screenshot.png)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -495,6 +481,36 @@ To reward active participation on the platform, it will be beneficial to award u
 # **Testing** (****** TESTING TO BE COMPLETED STILL)
 
 ### HTML Validation
+<details>
+<summary>Index/Home page </summary>  
+
+![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+</details>
+<details>
+<summary>Support post detail page </summary>  
+
+![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+</details>
+<details>
+<summary>Support post posting page </summary>  
+
+![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+</details>
+<details>
+<summary>About page </summary>  
+
+![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+</details>
+<details>
+<summary>FAQ page </summary>  
+
+![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+</details> 
+<details>
+<summary>Contact page </summary>  
+
+![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+</details> 
 
 ### index.html
 
