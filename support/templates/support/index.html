@@ -20,11 +20,11 @@
 
     <div class="row"> 
         <!-- Support Entries Column -->
-        <div class="col-12 col-sm-10 mx-auto">
+        <div class="col-12 col-md-10 mx-auto">
             <div class="row mb-2">
                 {% for support in support_list %}
                 <div class="col-12">
-                    <div class="card-body col-12 col-sm-10 mx-auto">
+                    <div class="card-body col-12 col-lg-10 mx-auto">
                         <div class="support-post-header">
                             <a href="{% url 'support_detail' support.slug %}" class="post-link">
                                 <h2 class="card-title mb-2 p-2">{{ support.topic }}</h2>

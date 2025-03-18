@@ -39,7 +39,10 @@
         <div class="container-fluid" style="background-color: #f3e290;">
             <a class="navbar-brand" href="{% url 'home' %}">
                 <img id="navbar-logo" src="/static/images/ITAV-logo.jpg" 
-                alt="It Takes A Village logo"><span class="green-o d-none d-sm-block">IT TAKES A VILLAGE</span>
+                alt="It Takes A Village logo">
+            </a>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <span class="green-o d-none d-sm-block">IT TAKES A VILLAGE</span>
             </a>
             <button class="navbar-toggler pt-1 pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,13 +68,13 @@
                     </li>
                 </ul>
                 {% if user.is_authenticated %}
+                <p class="text-end m-3">You are logged in as {{ user }}</p>
                 <li class="navbar-nav nav-item">
                     <a class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-info"
                         aria-current="page" href="{% url 'support_post' %}">Create Support Post</a>
                 </li>
-                <p class="text-end m-3">You are logged in as {{ user }}</p>
                 <li class="navbar-nav nav-item">
-                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %} btn btn-secondary"
                         aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 {% else %}
