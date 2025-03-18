@@ -147,6 +147,14 @@ body {
     color: white;
 }
 
+.btn-info {
+    background-color: #8eddff;
+}
+
+.btn-secondary {
+    background-color: #ffc2c2;
+}
+
 .link {
     color: #23BBBB;
     text-decoration: none;
