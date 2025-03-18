@@ -482,34 +482,39 @@ To reward active participation on the platform, it will be beneficial to award u
 
 ### HTML Validation
 <details>
-<summary>Index/Home page </summary>  
+<summary>Base HTML</summary>  
 
-![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+![Base HTML](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
 </details>
 <details>
-<summary>Support post detail page </summary>  
+<summary>Index/Home page</summary>  
 
-![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+![Index/Home page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
 </details>
 <details>
-<summary>Support post posting page </summary>  
+<summary>Support post detail page</summary>  
 
-![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+![Support post detail page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
 </details>
 <details>
-<summary>About page </summary>  
+<summary>Support post posting page</summary>  
 
-![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+![Support post posting page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
 </details>
 <details>
-<summary>FAQ page </summary>  
+<summary>About page</summary>  
 
-![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+![About page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+</details>
+<details>
+<summary>FAQ page</summary>  
+
+![FAQ page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
 </details> 
 <details>
-<summary>Contact page </summary>  
+<summary>Contact page</summary>  
 
-![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
+![Contact page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
 </details> 
 
 ### index.html
