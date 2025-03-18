@@ -212,6 +212,13 @@ body {
     color: white;
 }
 
+/* Media query: smaller devices (411px and down) */
+@media screen and (max-width: 611px) {
+    .index-header {
+        font-size: small;
+    }
+}
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {}
 
@@ -221,9 +228,3 @@ body {
 /* Media query: laptops and screens (1200px and up) */
 @media screen and (min-width: 1200px) {}
 
-/* Media query: smaller devices (411px and down) */
-@media screen and (max-width: 411px) {
-    .index-header {
-        font-size: 100%;
-    }
-}
