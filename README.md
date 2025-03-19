@@ -106,64 +106,79 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 ---
 
 ### Project pre-planning
-![Planning](EXCEL SHEET SCREENSHOT.png)
-![What is V](EXCEL SHEET SCREENSHOT.png)
-![ERD](EXCEL SHEET SCREENSHOT.png)
-![Pages](EXCEL SHEET SCREENSHOT.png)
+<details open>
+<summary>ERD - Models </summary>  
 
+![ERD - Models](/static/images/README-images/planning-erd-models.png)
+</details> 
+<details open>
+<summary>FAQ Prework </summary>  
+
+![FAQ Prework](/static/images/README-images/planning-faq.png)
+</details> 
+<details open>
+<summary>Pages structure</summary>  
+
+![Pages structure](/static/images/README-images/planning-pages-structure.png)
+</details> 
+<details open>
+<summary>What is Itav? </summary>  
+
+![What is Itav](/static/images/README-images/planning-what-is-v.png)
+</details> 
 
 # **Wireframes**
 
 <details open>
-<summary>Wireframe - Mobile - Homepage </summary>  
+<summary>Wireframe - Mobile - Homepage</summary>  
 
 ![Wireframe - Mobile - Homepage](/static/images/README-images/wireframe-v-mobile-homepage.png)
 </details> 
 
 <details>
-<summary>Wireframe - Mobile - Support Post detail page  </summary>  
+<summary>Wireframe - Mobile - Support Post detail page</summary>  
 
 ![Wireframe - Mobile - Support Post detail page](/static/images/README-images/wireframe-v-mobile-post-detail-page.png)
 </details> 
 
 <details>
-<summary>Wireframe - Mobile - About page  </summary>  
+<summary>Wireframe - Mobile - About page</summary>  
 
 ![Wireframe - Mobile - About page](/static/images/README-images/wireframe-v-mobile-about-page.png)
 </details> 
 
 <details>
-<summary>Wireframe - Mobile - Contact us page </summary>  
+<summary>Wireframe - Mobile - Contact us page</summary>  
 
 ![Wireframe - Mobile - Contact us page](/static/images/README-images/wireframe-v-mobile-contact-us-page.png)
 </details> 
 
 <details>
-<summary>Wireframe - Desktop - Homepage </summary>  
+<summary>Wireframe - Desktop - Homepage</summary>  
 
 ![Wireframe - Desktop - Homepage](//static/images/README-images/wireframe-v-desktop-homepage.png)
 </details> 
 
 <details>
-<summary>Wireframe - Desktop - Homepage with categories and advertisements (future) </summary>  
+<summary>Wireframe - Desktop - Homepage with categories and advertisements (future)</summary>  
 
 ![Wireframe - Desktop - Homepage with categories and advertisements](/static/images/README-images/wireframe-v-desktop-homepage-with-categories-and-advertisement.png)
 </details> 
 
 <details>
-<summary>Wireframe - Desktop - Support Post detail page </summary>  
+<summary>Wireframe - Desktop - Support Post detail page</summary>  
 
 ![Wireframe - Mobile - Contact us page](/static/images/README-images/wireframe-v-desktop-post-detail-page.png)
 </details> 
 
 <details>
-<summary>Wireframe - Desktop - About us page </summary>  
+<summary>Wireframe - Desktop - About us page</summary>  
 
 ![Wireframe - Desktop - About us page ](/static/images/README-images/wireframe-v-desktop-about-page.png)
 </details> 
 
 <details>
-<summary>Wireframe - Desktop - Contact us page </summary>  
+<summary>Wireframe - Desktop - Contact us page</summary>  
 
 ![Wireframe - Desktop - Contact us page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
 </details> 

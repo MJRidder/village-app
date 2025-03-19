@@ -1,10 +1,10 @@
-{% load static %} 
-{% url 'home' as home_url %} 
-{% url 'about' as about_url %} 
-{% url 'faq' as faq_url %} 
-{% url 'support_post' as supportpost_url %} 
-{% url 'account_login' as login_url %} 
-{% url 'account_signup' as signup_url %} 
+{% load static %}
+{% url 'home' as home_url %}
+{% url 'about' as about_url %}
+{% url 'faq' as faq_url %}
+{% url 'support_post' as supportpost_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
@@ -52,8 +52,7 @@
             <img
               id="navbar-logo"
               src="/static/images/it-takes-a-village-logo.png"
-              alt="It Takes A Village logo"
-            />
+              alt="It Takes A Village logo"/>
           </a>
           <a class="navbar-brand" href="{% url 'home' %}">
             <span class="green-o d-none d-sm-block">IT TAKES A VILLAGE</span>
@@ -76,32 +75,28 @@
                   class="nav-link {% if request.path == home_url %}active{% endif %}"
                   aria-current="page"
                   href="{% url 'home' %}"
-                  >Home</a
-                >
+                  >Home</a>
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link {% if request.path == about_url %}active{%endif%}"
                   aria-current="page"
                   href="{% url 'about' %}"
-                  >About</a
-                >
+                  >About</a>
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link {% if request.path == faq_url %}active{% endif %}"
                   aria-current="page"
                   href="{% url 'faq' %}"
-                  >FAQ</a
-                >
+                  >FAQ</a>
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link {% if request.path == contact_url %}active{% endif %}"
                   aria-current="page"
                   href="{% url 'contact' %}"
-                  >Contact</a
-                >
+                  >Contact</a>
               </li>
             </ul>
             {% if user.is_authenticated %}
@@ -112,16 +107,14 @@
                   class="nav-link {% if request.path == supportpost_url %}active{% endif %} btn btn-info"
                   aria-current="page"
                   href="{% url 'support_post' %}"
-                  >Create Support Post</a
-                >
+                  >Create Support Post</a>
               </li>
               <li class="nav-item navbar-nav">
                 <a
                   class="nav-link {% if request.path == logout_url %}active{% endif %} btn btn-secondary"
                   aria-current="page"
                   href="{% url 'account_logout' %}"
-                  >Logout</a
-                >
+                  >Logout</a>
               </li>
             </ul>
             <ul class="navbar-nav">
@@ -131,16 +124,14 @@
                   class="nav-link {% if request.path == signup_url %}active{% endif %}"
                   aria-current="page"
                   href="{% url 'account_signup' %}"
-                  >Register</a
-                >
+                  >Register</a>
               </li>
               <li class="nav-item navbar-nav">
                 <a
                   class="nav-link {% if request.path == login_url %}active{% endif %}"
                   aria-current="page"
                   href="{% url 'account_login' %}"
-                  >Login</a
-                >
+                  >Login</a>
               </li>
               <p class="text-end m-3">You are not logged in</p>
             </ul>
