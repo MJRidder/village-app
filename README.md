@@ -496,74 +496,25 @@ To reward active participation on the platform, it will be beneficial to award u
 # **Testing** (****** TESTING TO BE COMPLETED STILL)
 
 ### HTML Validation
-<details>
-<summary>Index/Home page</summary>  
-
-![Index/Home page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
-</details>
-<details>
-<summary>Support post detail page</summary>  
-
-![Support post detail page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
-</details>
-<details>
-<summary>Support post posting page</summary>  
-
-![Support post posting page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
-</details>
-<details>
-<summary>About page</summary>  
-
-![About page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
-</details>
-<details>
-<summary>FAQ page</summary>  
-
-![FAQ page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
-</details> 
-<details>
-<summary>Contact page</summary>  
-
-![Contact page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
-</details> 
-
-### index.html
-
-![index.html validation](readmedocs/index.png)
-
-### haven.html
-
-![haven.html validation](readmedocs/haven.png)
-
-### resources.html
-
-![resources.html validation](readmedocs/resources.png)
-
-### contact.html
-
-![contact.html validation](readmedocs/contact.png)
+To validate HTML I used the [HTML validator](https://validator.w3.org/). I found it challenging to get a clear image showing the correctness of the different templates as due to the cross referencing of templates, specific errors were shown for different validation tests. Mostly the tests showed errors concerning the Django template language or other Django presetup templates. Additionally, when using the database with the the summernote extension, 
 
 ### CSS Validation
 
-![style.css validation](readmedocs/css.png)
+![style.css validation](/static/images/README-images/css-validation-pass.png)
 
 ### JS Validation
 
-### script.js
+### replies.js
 
-![script.js validation](readmedocs/script.png)
-
-### escape.js
-
-![escape.js validation](readmedocs/escapejs.png)
+![replies.js validation](/static/images/README-images/js-validation-replies.png)
 
 ### Lighthouse 
 
 ### Desktop
-![Desktop](readmedocs/lighthouse.png)
+![Desktop](/static/images/README-images/lighthouse-desktop-validation.png)
 
 ### Mobile
-![Mobile](readmedocs/moblightlight.png)
+![Mobile](/static/images/README-images/lighthouse-mobile-validation.png)
 
 
 [Back to Table of Contents](#table-of-contents)
