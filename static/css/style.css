@@ -10,7 +10,6 @@ body {
 }
 
 #navbar-logo {
-
     max-width: 80px;
     max-height: 80px;
     border-radius: 25%;
@@ -43,6 +42,10 @@ body {
 
 .main-bg {
     background-color: #F9FAFC;
+}
+
+.main {
+    height: 100vh;
 }
 
 .card {
@@ -125,7 +128,6 @@ body {
 }
 
 .post-subtitle {
-    margin-left: 5%;
     color: lightgray;
 }
 
@@ -236,6 +238,14 @@ body {
 @media screen and (max-width: 611px) {
     .index-header {
         font-size: small;
+    }
+
+    .card-title {
+        font-size: 80%;
+    }
+
+    .parent {
+        font-size: 80%;
     }
 }
 

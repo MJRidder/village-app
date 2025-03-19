@@ -6,7 +6,7 @@
 <!-- frequently_asked_questions.html content starts here -->
 <div class="index-header">
     <div class="col-10 mx-auto mt-4">
-        <p>Welcome to our Frequently asked questions page.
+        <p>These are our Frequently asked questions.
         <br>
         We hope you will find your answers here.
         </p>
@@ -16,14 +16,13 @@
 
     <div class="row">
         <!-- FAQ Entries Column -->
-        <div class="col-10 mx-auto">
+        <div class="col-12 col-md-10 mx-auto">
             <div class="row mb-2">
                 {% for faq in faq_list %}
                 <div class="col-12">
                     <div>
                         <div class="card-body">
                             <div class="support-post-header">
-                                <!-- <a href="{% url 'support_detail' faq.slug %}" class="post-link"> -->
                                     <h2 class="card-title mb-2 p-2">{{ faq.question }}</h2>
                                 </a>
                             </div>
@@ -57,5 +56,4 @@
     {% endif %}
 </div>
 
-<!-- index.html content ends here -->
 {% endblock %}

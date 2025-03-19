@@ -482,11 +482,6 @@ To reward active participation on the platform, it will be beneficial to award u
 
 ### HTML Validation
 <details>
-<summary>Base HTML</summary>  
-
-![Base HTML](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
-</details>
-<details>
 <summary>Index/Home page</summary>  
 
 ![Index/Home page](/static/images/README-images/wireframe-v-desktop-contact-us-page.png)
