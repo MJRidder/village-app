@@ -156,7 +156,7 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 <details>
 <summary>Wireframe - Desktop - Homepage</summary>  
 
-![Wireframe - Desktop - Homepage](//static/images/README-images/wireframe-v-desktop-homepage.png)
+![Wireframe - Desktop - Homepage](/static/images/README-images/wireframe-v-desktop-homepage.png)
 </details> 
 
 <details>
@@ -224,18 +224,18 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
 The Navbar adjusts to the screensize and uses a burger Icon to hide the menu on smaller screens.
  
- ![Navbar Desktop Not Logged in](/static/images/README-images/navbar-v-desktop-not-logged-in.png)
- ![Navbar Desktop Logged in](/static/images/README-images/navbar-v-desktop-logged-in.png)
- ![Navbar mobile](/static/images/README-images/navbar-v-mobile.png)
+ ![Navbar Desktop Not Logged in](/static/images/README-images/navbar-desktop-not-logged-in.png)
+ ![Navbar Desktop Logged in](/static/images/README-images/navbar-desktop-logged-in.png)
+ ![Navbar mobile](/static/images/README-images/navbar-mobile-collapsed.png)
  <details>
 <summary>Navbar Mobile menu not logged in</summary>  
 
-![Navbar Mobile menu not logged in](/static/images/README-images/navbar-v-mobile-menu-not-logged-in.png)
+![Navbar Mobile menu not logged in](/static/images/README-images/navbar-mobile-menu-not-logged-in.png)
 </details> 
  <details>
 <summary>Navbar Mobile menu logged in</summary>  
 
-![Navbar Mobile menu logged in](/static/images/README-images/navbar-v-mobile-menu-logged-in.png)
+![Navbar Mobile menu logged in](/static/images/README-images/navbar-mobile-menu-logged-in.png)
 </details> 
 
 

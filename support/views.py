@@ -119,17 +119,13 @@ def support_post(request):
     if request.method == "POST":
         support_form = SupportForm(data=request.POST)
         if support_form.is_valid():
-            print('form is valid')
             userpost = support_form.save(commit=False)
             userpost.parent = request.user
             userpost.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Your Support post has been submitted and is awaiting approval.'
+                'Your Support post has been submitted and is awaiting approval'
             )
-        else:
-            print('Support form is invalid')
-            print(support_form.errors)
 
     support_form = SupportForm()
 
