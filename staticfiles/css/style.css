@@ -44,6 +44,10 @@ body {
     background-color: #F9FAFC;
 }
 
+.main {
+    height: 100vh;
+}
+
 .card {
     background-color: transparent;
 }
@@ -237,7 +241,7 @@ body {
     }
 
     .card-title {
-        font-size: 100%;
+        font-size: 80%;
     }
 
     .parent {
