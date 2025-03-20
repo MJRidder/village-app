@@ -546,6 +546,9 @@ One specific error I was not able to figure out, was a list error. Stating that 
 
 ![replies.js validation](/static/images/README-images/js-validation-replies.png)
 
+### PEP8
+During the creation of the files, autopep8 was installed in VScode to manage the files set up.
+
 ### Lighthouse 
 
 ### Desktop
