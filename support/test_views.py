@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.contrib.messages import get_messages
 from django.urls import reverse
 from django.test import TestCase
 from .forms import RespondForm, SupportForm
@@ -67,6 +68,21 @@ class TestSupportPost(TestCase):
         containing a support post user form"""
         response = self.client.get('/support_post/')
         self.assertEqual(response.status_code, 200)
-        # self.assertIn(b'Add your', response.content)
         self.assertIsInstance(
             response.context['support_form'], SupportForm)
+
+    def test_successful_support_form_submission(self):
+        """Test for a user completed support form"""
+
+        # support_post = {
+        #     'topic': 'The ask that I have',
+        #     'content': 'content about topic',
+        #     'region': 'Not specified',
+        #     'age_group': 'Not specified',
+        #     'type_of_request': 'not specified'
+        # }
+
+        response = self.client.post('/support_post/', self.support_post, follow=True)
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(str(messages[0]), 'Your Support post has been submitted and is awaiting approval.')

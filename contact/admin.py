@@ -7,4 +7,4 @@ class ContactFormAdmin(admin.ModelAdmin):
     """
     Lists received message and read fields for display in admin
     """
-    list_display = ('message', 'read',)
+    list_display = ('message', 'created_on', 'read',)

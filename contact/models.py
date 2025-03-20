@@ -28,6 +28,7 @@ class ContactForm(models.Model):
 
     email = models.EmailField()
     message = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
 
     def __str__(self):

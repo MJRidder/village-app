@@ -66,7 +66,7 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
     2. Support: Life happens. And we are not always prepared for it. Especially the life of a parent can be very unexpected. This website tries to create that digital Village that allows fellow parents to help eachother when it is most needed. Parenting can be a very daunting task, but having people around you, who are or have been going through the same, can be a huge support. Physically as well as mentally.
 
-    *. Education: A future use of Village would be to educate parents on some of the essesntials of parenting. Although there is not ONE way to do it right, there are several ways how NOT to parent. Providing guidance, where possible locally inspired can be a huge help to parents of children of all ages.
+*. Education: A future use of Village would be to educate parents on some of the essesntials of parenting. Although there is not ONE way to do it right, there are several ways how NOT to parent. Providing guidance, where possible locally inspired can be a huge help to parents of children of all ages.
 
 ### First Time Users
 
@@ -493,10 +493,48 @@ To reward active participation on the platform, it will be beneficial to award u
 
 ---
 
-# **Testing** (****** TESTING TO BE COMPLETED STILL)
+# **Testing**
 
 ### HTML Validation
-To validate HTML I used the [HTML validator](https://validator.w3.org/). I found it challenging to get a clear image showing the correctness of the different templates as due to the cross referencing of templates, specific errors were shown for different validation tests. Mostly the tests showed errors concerning the Django template language or other Django presetup templates. Additionally, when using the database with the the summernote extension, 
+To validate HTML I used the [HTML validator](https://validator.w3.org/). I found it challenging to get a clear image showing the correctness of the different templates as due to the cross referencing of templates, specific errors were shown for different validation tests. When using the HTML code directly, mostly the tests showed errors concerning the Django template language or other Django presetup templates.
+
+<details>
+<summary>Example of Django template error</summary>  
+
+![Example of Django template error](/static/images/README-images/html-validation-django-language-templates.png)
+</details> 
+
+Or it was asking for the standard HTML start of a template document. Which I am currently unsure to resolve.
+
+<details>
+<summary>Basic HTML setup example</summary>  
+
+![Basic HTML setup](/static/images/README-images/html-validation-missing-base-html.png)
+</details> 
+
+Also the provided CSS was flagged as incorrect.
+
+<details>
+<summary>Preset CSS flagging example</summary>  
+
+![Preset CSS flagging](/static/images/README-images/html-validation-django-preset-css.png)
+</details> 
+ 
+ Additionally, when using the database with the the summernote extension, it caused for double paragraph tags, which are not to be found in the standard HTML template, but are added through Summernote.
+
+<details>
+<summary>Double paragraph tag example</summary>  
+
+![Double paragraph tag example](/static/images/README-images/html-validation-double-paragraphs.png)
+</details> 
+
+One specific error I was not able to figure out, was a list error. Stating that a "li>" tag could not be a child of a "div>" tag. Which I fixed by indeed including the list items in a "ul>" tag as is the standard. However after adding this, the error was still shown. 
+
+<details>
+<summary>List error example</summary>  
+
+![List error example](/static/images/README-images/html-validation-list-error.png)
+</details> 
 
 ### CSS Validation
 
@@ -540,6 +578,7 @@ To validate HTML I used the [HTML validator](https://validator.w3.org/). I found
 | [Youtube](https://www.youtube.com/watch?v=Jyvffr3aCp0) | HTML | Bootstrap usage |
 | [Stack Overflow](https://stackoverflow.com/) | Coding | Django Functionality |
 | [havenshelter](https://www.havenshelter.org) | Media | Logo placeholder |
+| [Code Institute](https://github.com/Code-Institute-Solutions/blog) | Coding | Page structuring/building |
 
 ## **Credits** 
 
@@ -550,5 +589,6 @@ To validate HTML I used the [HTML validator](https://validator.w3.org/). I found
 ## **Shout outs**
 
 - I would like to thank Rory Patrick Sheridan for his support during this project. He Guided me at the start with determining the direction and the aim of the project. Helped me along the way by pointing out critical improvements and gave me valuable feedback on how to improve my way of working.
+- The "It Takes a Village" project has been inspired by the Django Blog mini project, which has provided much of the workflow and steps.
 
 [Back to Table of Contents](#table-of-contents)
