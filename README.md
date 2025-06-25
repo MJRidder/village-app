@@ -388,6 +388,23 @@ GitHub was used to deploy the website. These were the steps taken to achieve thi
 
 The live link on Heroku can be found [here](https://it-takes-a-village-ab7da68f58c4.herokuapp.com/)
 
+### via Heroku
+
+1. Navigate to [heroku](https://www.heroku.com/home) and create an account.
+2. Click `Create new app`, enter the app name and choose your region, hit `create app`.
+3. Click **Deploy** and in the _Deployment method_ option choose **Github**. Enter the repository's name and click connect, you can leave the branch deployment to `main`.
+   > You need to have created your github repository.
+4. Head to **Settings** and click `Reveal config vars`
+5. On the KEY inputs add: DATABASE_URL - SECRET_KEY - CLOUDINARY_URL. On the VALUE inputs add your own, for each one.
+6. Click **Add buildpack** and choose `python`.
+7. Now you're set. Go back to `Deploy` and click **Deploy branch**.
+
+**Settings page information**<br>
+![Settings Message](/static/images/README-images/heroku_settings_message.png)
+
+**Env page information**<br>
+![Env Message](/static/images/README-images/heroku_env_message.png)
+
 ### Local Deployment
 This project can be cloned or forked in order to make a local copy on your own system.
 
