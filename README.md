@@ -6,6 +6,20 @@
 ![Am I responsive screen views](/static/images/README-images/am-i-responsive-screenshot.png)
 
 ---
+# Actions to complete before resubmitting:
+
+1. Add/Complete Testing section in README. example: https://github.com/Dimitris112/rum-away-testp4?tab=readme-ov-file#via-heroku
+2. Add Heroku deployment write ups (non has been added yet)
+3. Review the possibility to create different posts with the same title (it's OK, but currently the system blocks it)
+4. Review code quality, there are some html validation issues 
+
+* Merit:<br> 
+        - review/add HTML/CSS/Java/Python validation<br>
+        - improve error feedback to user<br>
+        - add proper testing guidelines<br>
+        - add Heroku deployment<br>
+
+
 
 
 ## Table of Contents
@@ -467,8 +481,11 @@ The idea of the It Takes A Village platform is peer-to-peer. This does not mean 
 ### 20. **Showcasing the amount of replies on a support post on the list view**
 The interactivity of a post can mean a lot to the user. Seeing that a support post, placed by another has several replies, can mean that the answer will already have been provided. It is then interesting for a user to interact with these post specifically. Users that are on the platform to help others, can then screen for posts that do not have many replies and provide the answer.
 
-### 21. **User levels/badgesw**
+### 21. **User levels/badges**
 To reward active participation on the platform, it will be beneficial to award users with specific levels, perks or even visual badges that can be displayed on their profile page and next to their name on the platform. Seeing posts and replies from these type of users can give additional gravitas/weight
+
+### 22. **Forgot password function**
+Add the ability for users to retrieve their password if they have forgotten it. 
  
  [Back to Table of Contents](#table-of-contents)
 
@@ -494,6 +511,8 @@ To reward active participation on the platform, it will be beneficial to award u
 ---
 
 # **Testing**
+
+## Validations
 
 ### HTML Validation
 To validate HTML I used the [HTML validator](https://validator.w3.org/). I found it challenging to get a clear image showing the correctness of the different templates as due to the cross referencing of templates, specific errors were shown for different validation tests. When using the HTML code directly, mostly the tests showed errors concerning the Django template language or other Django presetup templates.
@@ -549,7 +568,7 @@ One specific error I was not able to figure out, was a list error. Stating that 
 ### PEP8
 During the creation of the files, autopep8 was installed in VScode to manage the files set up.
 
-### Lighthouse 
+## Lighthouse 
 
 ### Desktop
 ![Desktop](/static/images/README-images/lighthouse-desktop-validation.png)
@@ -557,6 +576,471 @@ During the creation of the files, autopep8 was installed in VScode to manage the
 ### Mobile
 ![Mobile](/static/images/README-images/lighthouse-mobile-validation.png)
 
+## Running Tests
+Make sure to include the correct version for Django testing.
+
+Django -> requirements.txt
+
+On the terminal write the command: python3 manage.py test
+
+### Manual testing
+
+<details>
+    <summary><strong>Navigation & Footer</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Steps</th>
+                <th>Expected Result</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Home Navigation</td>
+                <td>
+                    1. Click on the <em>It TAKES A VILLAGE</em> text.<br>
+                    2. Click on the <em>Home</em> link.
+                    3. Click on the <em>ITAV logo</em>
+                </td>
+                <td>User is redirected to the homepage (index.html).</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>About Navigation</td>
+                <td>
+                    1. Click on the <em>About</em> link.
+                </td>
+                <td>User is redirected to the about page (about.html).</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>FAQ Navigation</td>
+                <td>
+                    1. Click on the <em>FAQ</em> link.
+                </td>
+                <td>User is redirected to the FAQ page (faq.html).</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Contact Navigation</td>
+                <td>
+                    1. Click on the <em>Contact</em> link.
+                </td>
+                <td>User is redirected to the contact page (contact.html).</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Register Navigation</td>
+                <td>
+                    1. Click on the <em>Register</em> link.
+                </td>
+                <td>User is redirected to the register page (signup.html).</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Login Navigation</td>
+                <td>
+                    1. Click on the <em>Login</em> link.
+                </td>
+                <td>User is redirected to the login page (login.html).</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Logout Navigation</td>
+                <td>
+                    1. Click on the <em>Logout</em> link.
+                </td>
+                <td>User is redirected to the logout page (logout.html).</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Create Support Post Navigation</td>
+                <td>
+                    1. Click on the <em>Create Support Post</em> link.
+                </td>
+                <td>User is redirected to the Create Support Post page (support_post.html).</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Footer Links</td>
+                <td>
+                    1. Click on the <em>Facebook</em> logo.<br>
+                    2. Click on the <em>X/Twitter</em> logo.<br>
+                    3. Click on the <em>Instagram</em> logo.<br>
+                    4. Click on the <em>Youtube</em> logo.
+                </td>
+                <td>User is redirected to Facebook, X/Twitter, Instragram, Youtube pages in new tabs.</td>
+                <td>&#10003;</td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+<details>
+    <summary><strong>Support Page</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Steps</th>
+                <th>Expected Result</th>
+                <th>Pass/Fail</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Support Post Overview</td>
+                    <td>
+                    1. Navigate to the home page (support page).<br>
+                    2. All Support posts show Post Title, Parent, Intro clip and date/time of posting.
+                    </td>
+                    <td>All desired information is visible for the last 10 support posts</td>
+                    <td>&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Support Post details</td>
+                    <td>
+                    1. Navigate to the home page (support page).<br>
+                    2. Click on the <em>support post title</em> (green background, white letters).
+                    </td>
+                    <td>User is redirected to the specific support post details page. (index.html/slug)</td>
+                    <td>&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Next Support Post Page</td>
+                    <td>
+                    1. Navigate to the home page (support page).<br>
+                    2. Click on the <em>NEXT >></em> at the bottom of the page.
+                    </td>
+                    <td>User is redirected to the next support post page. (index.html/?page='123')</td>
+                    <td>&#10003;</td>
+                </tr>
+                </tr>
+                    <td>Previous Support Post Page</td>
+                    <td>
+                    1. Navigate to a support page. (not home page)<br>
+                    2. Click on the <em><< PREV</em> at the bottom of the page.
+                    </td>
+                    <td>User is redirected to the previous support post page. (index.html/?page='123')</td>
+                    <td>&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Navbar Visibility</td>
+                    <td>
+                        1. Navigate to the home page.
+                        2. Scroll down the page.
+                    </td>
+                    <td>Navbar is visible only when scrolling completely up. Becomes hidden when scrolling down.</td>
+                    <td>&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Navbar Shows on Scroll Up</td>
+                    <td>
+                    1. Navigate to the home page.<br>
+                    2. Scroll down to hide the navbar.<br>
+                    3. Scroll up.
+                    </td>
+                    <td>The navbar reappears.</td>
+                    <td>&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Footer Visibility</td>
+                    <td>
+                    1. Navigate to the home page.
+                    </td>
+                    <td>Footer with a dark grey background and white text is visible only when scolled completely down.</td>
+                    <td>&#10003;</td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+<details>
+  <summary><strong>Support Details Page</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Steps</th>
+                <th>Expected Result</th>
+                <th>Pass/Fail</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Back to Home</td>
+                <td>
+                1. Navigate to the Support Details Page.<br>
+                2. Click on the <em>Back to Home</em> button.
+                </td>
+                <td>User is redirected to the home page (support post page).</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Leave reply</td>
+                <td>
+                1. Navigate to the Support Details Page.<br>
+                2. Type a reply in the <em>body</em> text field.<br>
+                3. Click on the <em>Submit</em> button.
+                </td>
+                <td>Support details page reloads and user sees correct confirmation message. Reply is correctly sent to admin for approval.</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Pending reply</td>
+                <td>
+                1. Navigate to the Support Details Page.<br>
+                2. Type a reply in the <em>body</em> text field.<br>
+                3. Click on the <em>Submit</em> button.
+                </td>
+                <td>Until Admin approves reply, user correctly sees 'awaiting approval' message</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Delete reply</td>
+                <td>
+                1. Navigate to the Support Details Page.<br>
+                2. Click on the <em>Delete</em> button (Red).
+                </td>
+                <td>User is requested to confirm deletion, both confirming and not confirming works correctly and user receives confirmation.</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Edit reply</td>
+                <td>
+                1. Navigate to the Support Details Page.<br>
+                2. Click on the <em>Edit</em> button (Green).<br>
+                3. Edit reply in the body and click the <em>Update</em> button.
+                </td>
+                <td>User receives confirmation of editing and sees the update is "awaiting approval".</td>
+                <td>&#10003;</td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+<details>
+    <summary><strong>FAQ Page</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Steps</th>
+                <th>Expected Result</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>FAQ details</td>
+                <td>
+                1. Navigate to the FAQ page.<br>
+                2. All FAQ posts (green background, white letters) show post question and (full) answer.
+                </td>
+                <td>All desired information is visible for the last 10 FAQ posts</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Next FAQ Post Page</td>
+                <td>
+                1. Navigate to the FAQ page.<br>
+                2. Click on the <em>NEXT >></em> at the bottom of the page.
+                </td>
+                <td>User is redirected to the next FAQ post page. (faq.html/?page='123')</td>
+                <td>&#10003;</td>
+            </tr>
+            </tr>
+                <td>Previous FAQ Post Page</td>
+                <td>
+                1. Navigate to a FAQ page. (not the first page)<br>
+                2. Click on the <em><< PREV</em> at the bottom of the page.
+                </td>
+                <td>User is redirected to the previous FAQ post page. (faq.html/?page='123')</td>
+                <td>&#10003;</td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+<details>
+    <summary><strong>Register</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Steps</th>
+                <th>Expected Result</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Register Success</td>
+                <td>
+                1. Navigate to Register page.<br>
+                2. Enter valid credentials.<br>
+                3. Submit the form.
+                </td>
+                <td>User is redirected to homepage with 'Successfully signed in as (username)'.</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Password Mismatch</td>
+                <td>
+                1. Navigate to Register page.<br>
+                2. Enter passwords that don't match.<br>
+                3. Submit the form.
+                </td>
+                <td>Error message 'You must type the same password each time.'.</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Invalid Email Format</td>
+                <td>
+                1. Enter invalid email.<br>
+                2. Submit the form.
+                </td>
+                <td>Error message 'Enter a valid email address' (provides suggestions).</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Password Too Similar to Personal Information</td>
+                <td>
+                1. Enter a password similar to personal information (e.g., username or email).<br>
+                2. Submit the form.
+                </td>
+                <td>Error message 'Your password can’t be too similar to your other personal information.'</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Password Less Than 8 Characters</td>
+                <td>
+                1. Enter a password with fewer than 8 characters.<br>
+                2. Submit the form.
+                </td>
+                <td>Error message 'Your password must contain at least 8 characters.'</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Commonly Used Password</td>
+                <td>
+                1. Enter a commonly used password (e.g., 'password123').<br>
+                2. Submit the form.
+                </td>
+                <td>Error message 'This password is too common.'</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Password Entirely Numeric</td>
+                <td>
+                1. Enter a password that is entirely numeric (e.g., '12345678').<br>
+                2. Submit the form.
+                </td>
+                <td>Error message 'Your password can’t be entirely numeric.'</td>
+                <td>&#10003;</td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+<details>
+    <summary><strong>Login</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Steps</th>
+                <th>Expected Result</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Login Success</td>
+                <td>
+                1. Navigate to Login page.<br>
+                2. Enter valid username and password (case-insensitive).<br>
+                3. Submit the form.
+                </td>
+                <td>User is redirected to the homepage with 'Successfully signed in as (username)'.</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Incorrect Credentials</td>
+                <td>
+                1. Navigate to Login page.<br>
+                2. Enter invalid username or password.<br>
+                3. Submit the form.
+                </td>
+                <td>Error message 'The username and/or password you specified are not correct.'</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Remember Me Checkbox</td>
+                <td>
+                1. Navigate to Login page.<br>
+                2. Enter valid credentials.<br>
+                3. Check the 'Remember me' checkbox.<br>
+                4. Submit the form.
+                </td>
+                <td>User remains signed in on next visit.</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Empty Credentials</td>
+                <td>
+                1. Navigate to Sign-In page.<br>
+                2. Leave username and password fields empty.<br>
+                3. Submit the form.
+                </td>
+                <td>Error message 'This field is required.'</td>
+                <td>&#10003;</td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+<details>
+    <summary><strong>Contact Page</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Steps</th>
+                <th>Expected Result</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Contact Form Submission</td>
+                <td>
+                1. Fill in the <strong>Name</strong> field.<br>
+                2. Fill in the <strong>Topic</strong> field.<br>
+                3. Fill in the <strong>Email</strong> field.<br>
+                4. Choose an option for the <strong>Type of request</strong> field.<br>
+                4. Fill in the <strong>Message</strong> field.<br>
+                5. Click the <strong>Submit</strong> button.
+                </td>
+                <td>Contact page refreshes and a success message is displayed: 'Your message has been received!' </td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Contact Form Validation</td>
+                <td>
+                1. Leave the <strong>Name</strong>, <strong>Email</strong>, <strong>Topic</strong>, <strong>type of request</strong> and <strong>Message</strong> fields empty.<br>
+                2. Click the <strong>Submit</strong> button.
+                </td>
+                <td>Error messages are displayed for the required fields.</td>
+                <td>&#10003;</td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+<br>
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -593,5 +1077,6 @@ During the creation of the files, autopep8 was installed in VScode to manage the
 
 - I would like to thank Rory Patrick Sheridan for his support during this project. He Guided me at the start with determining the direction and the aim of the project. Helped me along the way by pointing out critical improvements and gave me valuable feedback on how to improve my way of working.
 - The "It Takes a Village" project has been inspired by the Django Blog mini project, which has provided much of the workflow and steps.
+- Quick shout out to Oisin Tohak who was so kind to review the comments by the evaluator with me, to improve this project
 
 [Back to Table of Contents](#table-of-contents)

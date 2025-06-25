@@ -11,7 +11,8 @@ class Support(models.Model):
     """
     Stores a support post
     """
-    topic = models.CharField(max_length=200, unique=True)
+    # topic duplication is OK, multiple users can post on same topic
+    topic = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     parent = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="support_post"
