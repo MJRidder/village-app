@@ -113,8 +113,8 @@
                   >Logout</a>
               </li>
             </ul>
+            {% else %}
             <ul class="navbar-nav">
-              {% else %}
               <li class="nav-item navbar-nav">
                 <a
                   class="nav-link {% if request.path == signup_url %}active{% endif %}"
