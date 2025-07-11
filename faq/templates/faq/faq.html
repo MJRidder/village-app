@@ -8,7 +8,7 @@
   <div class="col-10 mx-auto mt-4">
     <p>
       These are our Frequently asked questions.
-      <br/>
+      <br>
       We hope you will find your answers here.
     </p>
   </div>
@@ -25,9 +25,12 @@
               <div class="support-post-header">
                 <h2 class="card-title mb-2 p-2">{{ faq.question }}</h2>
               </div>
-              <p class="card-text">{{ faq.answer | safe }}</p>
-              <hr/>
-              <p class="card-text text-muted h6">{{ faq.created_on}}</p>
+              <div class="card-text">{{ faq.answer | safe }}</div>
+              <hr>
+              <div class="card-text text-muted h6">{{ faq.created_on}}</div>
+              <!-- <p class="card-text">{{ faq.answer | safe }}</p>
+              <hr>
+              <p class="card-text text-muted h6">{{ faq.created_on}}</p> -->
             </div>
           </div>
         </div>
