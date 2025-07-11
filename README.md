@@ -8,6 +8,17 @@
 ---
 # Actions to complete before resubmitting:
 
+| Ask | Action | Completed? |
+| --- | --- | --- |
+| Add/Complete Testing section in README.| Added manual testing for each web page | Yes |
+| Add Heroku deployment write ups | Added deployment steps for Heroku, Cloning & Forking | Yes |
+| Multiple posts currently can not have same title, no error message | Solve that similar titles are possible. As different parents can have the same title/issue/ask. | Not yet |
+| HTML validation issues | Review code with HTML & PEP8 validators | Not yet |
+| improve code validation steps | add HTML/CSS/Java/Python validation | Not yet |
+| improve error feedback to user | Review error messaging need and add where required | Not yet |
+
+
+IGNORE BELOW - DUE TO BE REMOVED - ORIGINAL WRITE UP OF FEEDBACK
 1. Add/Complete Testing section in README. example: https://github.com/Dimitris112/rum-away-testp4?tab=readme-ov-file#via-heroku
 2. Add Heroku deployment write ups (non has been added yet)
 3. Review the possibility to create different posts with the same title (it's OK, but currently the system blocks it)
@@ -380,6 +391,7 @@ Raising a child can be hard, raising several children even more so. With both pa
 
 # **Deployment**
 
+### Github
 GitHub was used to deploy the website. These were the steps taken to achieve this:
 
 - In the [GitHub repository](https://github.com/MJRidder/village-app), navigate to the Settings tab
@@ -388,16 +400,30 @@ GitHub was used to deploy the website. These were the steps taken to achieve thi
 
 The live link on Heroku can be found [here](https://it-takes-a-village-ab7da68f58c4.herokuapp.com/)
 
-### via Heroku
+### Heroku deployment
 
 1. Navigate to [heroku](https://www.heroku.com/home) and create an account.
 2. Click `Create new app`, enter the app name and choose your region, hit `create app`.
-3. Click **Deploy** and in the _Deployment method_ option choose **Github**. Enter the repository's name and click connect, you can leave the branch deployment to `main`.
-   > You need to have created your github repository.
-4. Head to **Settings** and click `Reveal config vars`
-5. On the KEY inputs add: DATABASE_URL - SECRET_KEY - CLOUDINARY_URL. On the VALUE inputs add your own, for each one.
-6. Click **Add buildpack** and choose `python`.
-7. Now you're set. Go back to `Deploy` and click **Deploy branch**.
+3. Name the app uniquely (e.g., "it-takes-a-village-app").
+4. Select the appropriate region.
+5. Click on "Create app".
+6. Navigate to the "Settings" tab.
+7. Under "Config Vars", add a new config var with the key "CREDS" and copy the contents of the creds.json file from your workspace into the value field.
+8. Click on "Add".
+9. Add two buildpacks: Python and node.js. Ensure Python is on top.
+10. Navigate to the "Deploy" section.
+11. Choose the deployment method (e.g., Github).
+12. Connect to your Github repository.
+13. Select the repository name.
+14. Click on "Connect".
+15. Choose either automatic deploys or manual deploys.
+16. If manual, select the branch to deploy.
+17. Wait for the deployment process to complete.
+18. Check the deployment logs for any errors.
+19. Test the deployed application to ensure it works correctly.
+20. Verify functionality with both correct and incorrect data inputs.
+
+Project deployed!
 
 **Settings page information**<br>
 ![Settings Message](/static/images/README-images/heroku_settings_message.png)
