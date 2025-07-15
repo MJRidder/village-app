@@ -7,6 +7,9 @@
 
 ---
 
+# Introduction
+The "It takes a Village" app is a project with the aim of building a Full-Stack site based on business logic used to control a centrally-owned dataset. It has an authentication mechanism and provides role-based access to the site's data and other activities based on the dataset. It Takes a Village is a Dublin, Ireland based community website, created by parents, FOR parents. Raising a child can be hard and it helps to connect with others locally who are in the same situation.
+
 # Actions to complete before resubmitting:
 
 | Ask | Action | Completed? |
@@ -79,7 +82,7 @@ Parenting is a rewarding but challenging journey, and no one should have to do i
 
 ### First Time Users
 
-- New users can access can read through existing support posts to see that they are not alone and to see how other parents would have solved similar challenges
+- New users can read through existing support posts to see that they are not alone and to see how other parents would have solved similar challenges
 
 - New users can find parents and support posts in their own neighborhood, to connect with
 
@@ -575,35 +578,88 @@ To validate HTML the [HTML validator](https://validator.w3.org/) was used. Due t
 ![replies.js validation](/static/images/README-images/js-validation-replies.png)
 
 ### PEP8
-PEP8 evalutaion have been carried out with [CI Python Linter](https://pep8ci.herokuapp.com/). All Apps have been reviewed ("About", "Contact", "faq" and "support). All included python files ("admin", "apps", "forms", "models", "teat_forms", "test_views", "tests", "urls" and "views") have been reviewed separately and deamed clear, no errors were found. A few '# noqa' notes have been added however for long links that went over the suggested 79 charactars.
+PEP8 evalutaion have been carried out with [CI Python Linter](https://pep8ci.herokuapp.com/). All Apps have been reviewed ("About", "Contact", "faq" and "support). All included python files ("admin", "apps", "forms", "models", "teat_forms", "test_views", "tests", "urls" and "views") have been reviewed separately and deamed clear, no errors were found. Limited '# noqa' notes have been added however for long links that went over the suggested 79 charactars.
 
 ## Lighthouse 
 
 With the Lighthouse app in the Developer Tools of Google Chrome the performance of the page has been checked for both desktop and mobile. Both results were very promising and passed validation.
 
-### Desktop
 <details>
-<summary>Desktop</summary>  
+<summary>Homepage - Desktop</summary>  
 
 ![Desktop](/static/images/README-images/dev-tools-lighthouse-validation-desktop.png)
 </details> 
-
-### Mobile
 <details>
-<summary>Mobile</summary>  
+<summary>Homepage - Mobile</summary>  
 
 ![Mobile](/static/images/README-images/dev-tools-lighthouse-validation-mobile.png)
+</details> 
+<details>
+<summary>About - Desktop</summary>  
+
+![Desktop](/static/images/README-images/dev-tools-lighthouse-validation-about-desktop.png)
+</details> 
+<details>
+<summary>About - Mobile</summary>  
+
+![Mobile](/static/images/README-images/dev-tools-lighthouse-validation-about-mobile.png)
+</details> 
+<details>
+<summary>FAQ - Deskto</summary>  
+
+![Desktop](/static/images/README-images/dev-tools-lighthouse-validation-faq-desktop.png)
+</details> 
+<details>
+<summary>FAQ - Mobile</summary>  
+
+![Mobile](/static/images/README-images/dev-tools-lighthouse-validation-faq-mobile.png)
+</details> 
+<details>
+<summary>Support Details - Desktop</summary>  
+
+![Desktop](/static/images/README-images/dev-tools-lighthouse-validation-supportdetails-desktop.png)
+</details> 
+<details>
+<summary>Support Details - Mobile</summary>  
+
+![Mobile](/static/images/README-images/dev-tools-lighthouse-validation-supportdetails-mobile.png)
+</details>
+<details>
+<summary>Support Form - Desktop</summary>  
+
+![Desktop](/static/images/README-images/dev-tools-lighthouse-validation-supportform-desktop.png)
+</details> 
+<details>
+<summary>Support Form - Mobile</summary>  
+
+![Mobile](/static/images/README-images/dev-tools-lighthouse-validation-supportform-mobile.png)
+</details> 
+<details>
+<summary>Contact - Desktop</summary>  
+
+![Desktop](/static/images/README-images/dev-tools-lighthouse-validation-contact-desktop.png)
+</details> 
+<details>
+<summary>Contact - Mobile</summary>  
+
+![Mobile](/static/images/README-images/dev-tools-lighthouse-validation-contact-mobile.png)
 </details> 
 
 ## Manual testing
 
-### Running Tests
+### Running Manual Tests
 Make sure to include the correct version for Django testing.
 
 Django -> requirements.txt
 
 On the terminal write the command: python3 manage.py test
+<details>
+<summary>Automated tests</summary>  
 
+![Automated tests](/static/images/README-images/automated-tests.png)
+</details> 
+
+### Running Manual Tests
 <details>
     <summary><strong>Navigation & Footer</strong></summary>
     <table>
@@ -1090,12 +1146,14 @@ On the terminal write the command: python3 manage.py test
 
 - 2025 January CI Hackathon project HAVEN - ReadMe inspiration
 - Code Institute - Django Blog inspired general concept
-- [Reddit](https://www.reddit.com/) for laytout inspiration
+- [Reddit](https://www.reddit.com/) for layout inspiration
+- The [Haven shelter](https://www.havenshelter.org/) - Image/logo
+
 
 ## **Shout outs**
 
 - I would like to thank Rory Patrick Sheridan for his support during this project. He Guided me at the start with determining the direction and the aim of the project. Helped me along the way by pointing out critical improvements and gave me valuable feedback on how to improve my way of working.
 - The "It Takes a Village" project has been inspired by the Django Blog mini project, which has provided much of the workflow and steps.
-- Quick shout out to Oisin Tohak who was so kind to review the comments by the evaluator with me, to improve this project
+- Quick shout out to Oisin Tohak who was so kind to review the comments by the evaluator with me, to improve this project and get me prepared for resubmission.
 
 [Back to Table of Contents](#table-of-contents)
