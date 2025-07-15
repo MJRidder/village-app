@@ -10,9 +10,9 @@
 
 | Ask | Action | Completed? |
 | --- | --- | --- |
-| Add/Complete Testing section in README.| Added manual testing for each web page | Yes |
-| Add Heroku deployment write ups | Added deployment steps for Heroku, Cloning & Forking | Yes |
-| Multiple posts currently can not have same title, no error message | Solve that similar titles are possible. As different parents can have the same title/issue/ask. | Not yet |
+| Add/Complete Testing section in README.| Add manual testing for each web page | Yes |
+| Add Heroku deployment write ups | Add deployment steps for Heroku, Cloning & Forking | Yes |
+| Multiple posts currently can not have same title, no error message | Added slugify with related 'save' func to model to allow for appending numbers  | yes |
 | HTML validation issues | Review code with HTML & PEP8 validators | Yes |
 | improve code validation steps | add HTML/CSS/Java/Python validation | Yes |
 | improve error feedback to user | Review error messaging need and add where required | Not yet |
