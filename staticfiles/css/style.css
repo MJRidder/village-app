@@ -242,6 +242,12 @@ body {
     font-weight: 300;
 }
 
+#about-info {
+    font-family: Tahoma, sans-serif;
+    font-weight: 300;
+    color: #445261;
+}
+
 .footer-img > i {
     color: white;
 }
