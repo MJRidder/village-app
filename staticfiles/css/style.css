@@ -128,7 +128,7 @@ body {
 }
 
 .post-subtitle {
-    color: lightgray;
+    color: #166020;
 }
 
 .btn-signup,
@@ -192,6 +192,7 @@ body {
     color: black;
     padding: 5px 30px;
     border-radius: 12px;
+    text-decoration: none;
 }
 
 .btn-back:hover,
