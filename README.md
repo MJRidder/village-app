@@ -14,11 +14,10 @@ The "It takes a Village" app is a project with the aim of building a Full-Stack 
 
 | Ask | Action | Completed? |
 | --- | --- | --- |
-| Add/Complete Testing section in README.| Add manual testing for each web page | Yes |
+| Add/Complete Testing section in README.| Add manual testing for each web page and review overall testing quality | Yes |
 | Add Heroku deployment write ups | Add deployment steps for Heroku, Cloning & Forking | Yes |
 | Multiple posts currently can not have same title, no error message | Added slugify with related 'save' func to model to allow for appending numbers  | Yes |
 | HTML validation issues | Review code with HTML & PEP8 validators | Yes |
-| improve code validation steps | add HTML/CSS/Java/Python validation | Yes |
 
 ## Table of Contents
 
@@ -532,18 +531,20 @@ Add the ability for users to retrieve their password if they have forgotten it.
 
 # **Tech Stack**
 
-### Languages Used 
+### Languages Used
 - HTML
 - CSS
 - Python
 - JavaScript
 
-### Frameworks, Libraries, Technologies & Programs Used
-- Bootstrap
-- Crispy
-- Django
-- Summernote
-- AllAuth
+### Main Frameworks, Libraries, Technologies & Programs Used (excl. dependancies)
+| Source | Use |
+| Django | Foundation of the web application |
+| Django allauth | Authentication system for Django supporting social login and email auth |
+| Django crispy-forms | Helps manage and style Django forms |
+| Django summernote | Improved Django Admin layout possibilities |
+| Bootstrap | Website layout |
+
 
 [Back to Table of Contents](#table-of-contents)
 
