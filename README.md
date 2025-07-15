@@ -6,32 +6,16 @@
 ![Am I responsive screen views](/static/images/README-images/am-i-responsive-screenshot.png)
 
 ---
+
 # Actions to complete before resubmitting:
 
 | Ask | Action | Completed? |
 | --- | --- | --- |
 | Add/Complete Testing section in README.| Add manual testing for each web page | Yes |
 | Add Heroku deployment write ups | Add deployment steps for Heroku, Cloning & Forking | Yes |
-| Multiple posts currently can not have same title, no error message | Added slugify with related 'save' func to model to allow for appending numbers  | yes |
+| Multiple posts currently can not have same title, no error message | Added slugify with related 'save' func to model to allow for appending numbers  | Yes |
 | HTML validation issues | Review code with HTML & PEP8 validators | Yes |
 | improve code validation steps | add HTML/CSS/Java/Python validation | Yes |
-| improve error feedback to user | Review error messaging need and add where required | Not yet |
-
-
-IGNORE BELOW - DUE TO BE REMOVED - ORIGINAL WRITE UP OF FEEDBACK
-1. Add/Complete Testing section in README. example: https://github.com/Dimitris112/rum-away-testp4?tab=readme-ov-file#via-heroku
-2. Add Heroku deployment write ups (non has been added yet)
-3. Review the possibility to create different posts with the same title (it's OK, but currently the system blocks it)
-4. Review code quality, there are some html validation issues 
-
-* Merit:<br> 
-        - review/add HTML/CSS/Java/Python validation<br>
-        - improve error feedback to user<br>
-        - add proper testing guidelines<br>
-        - add Heroku deployment<br>
-
-
-
 
 ## Table of Contents
 
@@ -328,6 +312,15 @@ A simple form, that allows the user to enter a support post. All fields are requ
 ### Ability to provide support through support replies
 The aim of Village is to create interaction. To connect parents locally. The reply function allows for parents to interact with the posts that they see on Village. To offer help, support and/or information.
 
+### About Page
+There is an 'About page' added to the website, explaining the reason for its creation and what the website's intended use is. It has the aim to inspire readers/parents to feel safe and to add support posts. Or of course visit the platform to help others. There is also an explanation on why this page is currently only useable in the Dublin, Ireland area. With of course the ambition to make the platform available on a larger scale.
+
+### FAQ Page
+As there are often recurring questions, there is a FAQ page with the most common questions already laid out. It is easy to add further questions to this overview via the Admin panel, in case the same questions are being send in.
+
+### Contact webform
+There is a contact webform for users to reach out to the creator of the website. Suggestions, questions or anything in between can be send in. It is also a way for potential partners to reach out with the intend to collaborate.
+
 ### Desktop / Table / Mobile View
 
 ![Am I responsive screen views](/static/images/README-images/am-i-responsive-screenshot.png)
@@ -558,7 +551,7 @@ Add the ability for users to retrieve their password if they have forgotten it.
 ## Validations
 
 ### HTML Validation
-To validate HTML the [HTML validator](https://validator.w3.org/) was used. Due to the many templates used, created by me or the standard templates from Django it was at times challenging to understand where certain errors originated from. At the moment all HTML pages have been reviewed and all HTML errors in the validation have been resolved. Except for one last error on the sign up page, which is part of the summernote extension which I seem to be able to resolve.
+To validate HTML the [HTML validator](https://validator.w3.org/) was used. Due to the many templates used, created by me or the standard templates from Django it was at times challenging to understand where certain errors originated from. At the moment all HTML pages have been reviewed and all HTML errors in the validation have been resolved. Except for one last error on the sign up page, which is part of the summernote extension which I seem to be unable to resolve.
 
 <details>
 <summary>Summarized error message</summary>  
@@ -573,7 +566,7 @@ To validate HTML the [HTML validator](https://validator.w3.org/) was used. Due t
 
 ### CSS Validation
 
-![style.css validation](/static/images/README-images/css-validation-pass.png)
+![style.css validation](/static/images/README-images/css-validator-pass-image.png)
 
 ### JS Validation
 
@@ -586,20 +579,30 @@ PEP8 evalutaion have been carried out with [CI Python Linter](https://pep8ci.her
 
 ## Lighthouse 
 
+With the Lighthouse app in the Developer Tools of Google Chrome the performance of the page has been checked for both desktop and mobile. Both results were very promising and passed validation.
+
 ### Desktop
-![Desktop](/static/images/README-images/lighthouse-desktop-validation.png)
+<details>
+<summary>Desktop</summary>  
+
+![Desktop](/static/images/README-images/dev-tools-lighthouse-validation-desktop.png)
+</details> 
 
 ### Mobile
-![Mobile](/static/images/README-images/lighthouse-mobile-validation.png)
+<details>
+<summary>Mobile</summary>  
 
-## Running Tests
+![Mobile](/static/images/README-images/dev-tools-lighthouse-validation-mobile.png)
+</details> 
+
+## Manual testing
+
+### Running Tests
 Make sure to include the correct version for Django testing.
 
 Django -> requirements.txt
 
 On the terminal write the command: python3 manage.py test
-
-### Manual testing
 
 <details>
     <summary><strong>Navigation & Footer</strong></summary>

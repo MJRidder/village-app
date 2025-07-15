@@ -1,5 +1,5 @@
 body {
-    background-color: #F9FAFC; 
+    background-color: #F9FAFC;
 }
 
 .brand {
@@ -192,7 +192,6 @@ body {
     color: black;
     padding: 5px 30px;
     border-radius: 12px;
-    text-decoration: none;
 }
 
 .btn-back:hover,
@@ -271,4 +270,3 @@ body {
 
 /* Media query: laptops and screens (1200px and up) */
 @media screen and (min-width: 1200px) {}
-

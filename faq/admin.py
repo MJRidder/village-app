@@ -18,7 +18,5 @@ class FaqAdmin(SummernoteModelAdmin):
         'question',
         'age_group',
         'region')
-    # QUESTION - how to minimise the filters in admin?
     prepopulated_fields = {'slug': ('question',)}
-    # QUESTION - how can I make the slug unique? add parent ID in there?
     summernote_fields = ('answer',)
