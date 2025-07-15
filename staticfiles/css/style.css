@@ -194,6 +194,18 @@ body {
     border-radius: 12px;
 }
 
+.btn-back:hover,
+.btn-back:active {
+    background-color: #166020;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-back a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .faded {
     color: rgb(172, 175, 175);
 }
