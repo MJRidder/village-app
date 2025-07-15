@@ -63,7 +63,7 @@ class Faq(models.Model):
     ]
 
     region = models.CharField(choices=REGION, default=Dublin_0, max_length=15)
-    
+
     # age_group Charfield content
     Not_Specified = "Not specified"
     Baby = "Baby (age 0-1y)"

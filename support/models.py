@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 
 STATUS = (
     (0, "Unposted"),
@@ -13,7 +14,7 @@ class Support(models.Model):
     """
     # topic duplication is OK, multiple users can post on same topic
     topic = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, blank=True, unique=True)
     parent = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="support_post"
     )
@@ -77,7 +78,7 @@ class Support(models.Model):
     ]
 
     region = models.CharField(choices=REGION, default=Dublin_0, max_length=15)
-    
+
     # age_group Charfield content
     Not_Specified = "Not specified"
     Baby = "Baby (age 0-1y)"
@@ -118,11 +119,25 @@ class Support(models.Model):
         max_length=25)
     status = models.IntegerField(choices=STATUS, default=0)
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            base_slug = slugify(self.topic)
+            slug = base_slug
+            counter = 1
+
+            while Support.objects.filter(slug=slug).exists():
+                slug = f"{base_slug}-{counter}"
+                counter += 1
+
+            self.slug = slug
+
+        super().save(*args, **kwargs)
+
     class Meta:
         ordering = ["-created_on", "region", "age_group", "type_of_request"]
 
     def __str__(self):
-        return f"{self.region} | {self.type_of_request} | {self.age_group} | Topic: {self.topic}"  #noqa
+        return f"{self.region} | {self.type_of_request} | {self.age_group} | Topic: {self.topic}"  # noqa
 
 
 class Respond(models.Model):

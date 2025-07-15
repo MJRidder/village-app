@@ -13,8 +13,8 @@
 | Add/Complete Testing section in README.| Added manual testing for each web page | Yes |
 | Add Heroku deployment write ups | Added deployment steps for Heroku, Cloning & Forking | Yes |
 | Multiple posts currently can not have same title, no error message | Solve that similar titles are possible. As different parents can have the same title/issue/ask. | Not yet |
-| HTML validation issues | Review code with HTML & PEP8 validators | Not yet |
-| improve code validation steps | add HTML/CSS/Java/Python validation | Not yet |
+| HTML validation issues | Review code with HTML & PEP8 validators | Yes |
+| improve code validation steps | add HTML/CSS/Java/Python validation | Yes |
 | improve error feedback to user | Review error messaging need and add where required | Not yet |
 
 
@@ -540,7 +540,7 @@ Add the ability for users to retrieve their password if they have forgotten it.
 - HTML
 - CSS
 - Python
-- JavaScript (?)
+- JavaScript
 
 ### Frameworks, Libraries, Technologies & Programs Used
 - Bootstrap
@@ -558,45 +558,18 @@ Add the ability for users to retrieve their password if they have forgotten it.
 ## Validations
 
 ### HTML Validation
-To validate HTML I used the [HTML validator](https://validator.w3.org/). I found it challenging to get a clear image showing the correctness of the different templates as due to the cross referencing of templates, specific errors were shown for different validation tests. When using the HTML code directly, mostly the tests showed errors concerning the Django template language or other Django presetup templates.
+To validate HTML the [HTML validator](https://validator.w3.org/) was used. Due to the many templates used, created by me or the standard templates from Django it was at times challenging to understand where certain errors originated from. At the moment all HTML pages have been reviewed and all HTML errors in the validation have been resolved. Except for one last error on the sign up page, which is part of the summernote extension which I seem to be able to resolve.
 
 <details>
-<summary>Example of Django template error</summary>  
+<summary>Summarized error message</summary>  
 
-![Example of Django template error](/static/images/README-images/html-validation-django-language-templates.png)
-</details> 
-
-Or it was asking for the standard HTML start of a template document. Which I am currently unsure to resolve.
-
+![Summarized error message](/static/images/README-images/unresolved-error-html-sign-up-page-1.png)
+</details>
 <details>
-<summary>Basic HTML setup example</summary>  
+<summary>Raw code where error can be found</summary>  
 
-![Basic HTML setup](/static/images/README-images/html-validation-missing-base-html.png)
-</details> 
-
-Also the provided CSS was flagged as incorrect.
-
-<details>
-<summary>Preset CSS flagging example</summary>  
-
-![Preset CSS flagging](/static/images/README-images/html-validation-django-preset-css.png)
-</details> 
- 
- Additionally, when using the database with the the summernote extension, it caused for double paragraph tags, which are not to be found in the standard HTML template, but are added through Summernote.
-
-<details>
-<summary>Double paragraph tag example</summary>  
-
-![Double paragraph tag example](/static/images/README-images/html-validation-double-paragraphs.png)
-</details> 
-
-One specific error I was not able to figure out, was a list error. Stating that a "li>" tag could not be a child of a "div>" tag. Which I fixed by indeed including the list items in a "ul>" tag as is the standard. However after adding this, the error was still shown. 
-
-<details>
-<summary>List error example</summary>  
-
-![List error example](/static/images/README-images/html-validation-list-error.png)
-</details> 
+![Raw code where error can be found](/static/images/README-images/unresolved-error-html-sign-up-page-2.png)
+</details>
 
 ### CSS Validation
 
@@ -609,7 +582,7 @@ One specific error I was not able to figure out, was a list error. Stating that 
 ![replies.js validation](/static/images/README-images/js-validation-replies.png)
 
 ### PEP8
-During the creation of the files, autopep8 was installed in VScode to manage the files set up.
+PEP8 evalutaion have been carried out with [CI Python Linter](https://pep8ci.herokuapp.com/). All Apps have been reviewed ("About", "Contact", "faq" and "support). All included python files ("admin", "apps", "forms", "models", "teat_forms", "test_views", "tests", "urls" and "views") have been reviewed separately and deamed clear, no errors were found. A few '# noqa' notes have been added however for long links that went over the suggested 79 charactars.
 
 ## Lighthouse 
 

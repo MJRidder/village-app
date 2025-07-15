@@ -3,7 +3,6 @@ from django_summernote.admin import SummernoteModelAdmin
 from .models import Support, Respond
 
 
-
 @admin.register(Support)
 class SupportAdmin(SummernoteModelAdmin):
 

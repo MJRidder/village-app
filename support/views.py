@@ -77,7 +77,9 @@ def reply_edit(request, slug, reply_id):
                 request, messages.SUCCESS, 'Your reply has been updated!')
         else:
             messages.add_message(
-                request, messages.ERROR, 'hmm.. We seem to be unable to update your reply. Please try again.')
+                request, messages.ERROR,
+                'hmm.. We seem to be unable to update your reply. '
+                'Please try again.')
 
     return HttpResponseRedirect(reverse('support_detail', args=[slug]))
 
