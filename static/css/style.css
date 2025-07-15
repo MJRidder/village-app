@@ -1,5 +1,5 @@
 body {
-    background-color: #F9FAFC;
+    background-color: #F9FAFC; 
 }
 
 .brand {
@@ -190,8 +190,16 @@ body {
 .btn-back {
     background-color: #d8d8d8;
     color: black;
-    padding: 0 30px;
+    padding: 5px 30px;
     border-radius: 12px;
+    text-decoration: none;
+}
+
+.btn-back:hover,
+.btn-back:active {
+    background-color: #166020;
+    color: white;
+    text-decoration: none;
 }
 
 .faded {
@@ -228,6 +236,12 @@ body {
 .contact-us {
     font-family: Tahoma, sans-serif;
     font-weight: 300;
+}
+
+#about-info {
+    font-family: Tahoma, sans-serif;
+    font-weight: 300;
+    color: #445261;
 }
 
 .footer-img > i {
